@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="anyeight.dao.ForumMapper">
+    
+    <resultMap id="PostMap" type="anyeight.model.Post">
+        <id column="post_id" jdbcType="VARCHAR" property="post_id"/>
+        <result column="user_id" jdbcType="VARCHAR" property="user_id"/>
+        <result column="user_name" jdbcType="VARCHAR" property="user_name"/>
+        <result column="date" jdbcType="DATE" property="date"/>
+        <result column="text" jdbcType="VARCHAR" property="text"/>
+        <result column="title" jdbcType="VARCHAR" property="title"/>
+        <result column="hotPoint" jdbcType="INTEGER" property="hotPoint"/>
+        <result column="current_size" jdbcType="INTEGER" property="current_size"/>
+    </resultMap>
+
+    <resultMap id="AnswerPostMap" type="anyeight.model.AnswerPost">
+        <id column="answer_id" jdbcType="VARCHAR" property="answer_id"/>
+        <result column="origin_id" jdbcType="VARCHAR" property="origin_id"/>
+        <result column="user_id" jdbcType="VARCHAR" property="user_id"/>
+        <result column="date" jdbcType="DATE" property="date"/>
+        <result column="text" jdbcType="VARCHAR" property="text"/>
+        <result column="floor" jdbcType="INTEGER" property="floor"/>
+    </resultMap>
+
+    <resultMap id="NewsMap" type="anyeight.model.News">
+        <id column="index" jdbcType="VARCHAR"/>
+        <result column="title" jdbcType="VARCHAR" property="title"/>
+        <result column="date" jdbcType="DATE" property="time"/>
+        <result column="type" jdbcType="VARCHAR" property="type"/>
+        <result column="url" jdbcType="VARCHAR" property="url"/>
+        <result column="code" jdbcType="VARCHAR" property="code"/>
+    </resultMap>
+
+    <resultMap id="InstantNews" type="anyeight.model.News">
+        <id column="index" jdbcType="VARCHAR"/>
+        <result column="title" jdbcType="VARCHAR" property="title"/>
+        <result column="time" jdbcType="DATE" property="time"/>
+        <result column="classify" jdbcType="VARCHAR" property="type"/>
+        <result column="url" jdbcType="VARCHAR" property="url"/>
+    </resultMap>
+
+
+    <select id="addPost" resultType="String">
+        INSERT INTO post (post_id, user_id, date,text,title,hotPoint,current_size)
+        VALUES ((SELECT id
+                 FROM create_id
+                 WHERE id_type = 'post')+1,#{0},#{1},#{2},#{3},0,0);
+        UPDATE create_id SET id= (SELECT post_id
+                                  FROM post
+                                  ORDER BY post_id DESC
+                                  LIMIT 1)
+        WHERE id_type = 'post';
+        SELECT max(post_id)
+        FROM post
+    </select>
+
+    <select id="getPostList" resultMap="PostMap">
+        SELECT post.post_id,post.user_id,post.date,post.text,post.title,post.hotPoint,post.current_size,user_login.user_name
+        FROM post,user_login
+        WHERE post.user_id = user_login.user_id
+        ORDER BY hotPoint DESC
+    </select>
+
+    <insert id="addAnswer">
+        INSERT INTO post_answer(answer_id,origin_id,user_id,date,text,floor)
+                VALUES ((SELECT id
+                         FROM create_id
+                         WHERE id_type = 'answer_post')+1,#{0},#{1},#{2},#{3},#{4});
+        UPDATE create_id SET id= (SELECT answer_id
+                                  FROM post_answer
+                                  ORDER BY answer_id DESC
+                                  LIMIT 1)
+        WHERE id_type = 'answer_post';
+    </insert>
+
+    <select id="getPost" resultMap="PostMap">
+        SELECT post.post_id,post.user_id,post.date,post.text,post.title,post.hotPoint,post.current_size,user_login.user_name
+        FROM post,user_login
+        WHERE post.post_id = #{0} and post.user_id = user_login.user_id
+    </select>
+
+    <update id="updatePost" parameterType="anyeight.model.Post">
+        UPDATE post SET date = #{date},text = #{text},title = #{title},hotPoint = #{hotPoint},current_size = #{current_size}
+        WHERE post_id = #{post_id} and user_id = #{user_id}
+    </update>
+
+    <delete id="delPost">
+        DELETE
+        FROM post
+        WHERE post_id = #{0}
+    </delete>
+
+    <delete id="delAllAnswer">
+        DELETE
+        FROM post_answer
+        WHERE origin_id = #{0}
+    </delete>
+
+    <select id="getAnswer" resultMap="AnswerPostMap">
+        SELECT *
+        FROM post_answer
+        WHERE answer_id = #{0}
+    </select>
+
+    <select id="getAnswerOfPost" resultMap="AnswerPostMap">
+        SELECT *
+        FROM post_answer
+        WHERE origin_id = #{0}
+    </select>
+
+    <delete id="delAnswer">
+        DELETE
+        FROM post_answer
+        WHERE answer_id = #{0}
+    </delete>
+
+    <select id="getNewsByID" resultMap="NewsMap">
+        SELECT *
+        FROM news
+        WHERE code = #{0}
+    </select>
+    
+    <select id="getNewsByName" resultMap="NewsMap">
+        SELECT *
+        FROM news n,stock_info info
+        WHERE info.name = #{0} and info.code = n.code
+    </select>
+
+    <select id="getNewsInstantNews" resultMap="InstantNews">
+        SELECT *
+        FROM instant_news
+        LIMIT 20
+    </select>
+
+    <select id="getUserPost" resultMap="PostMap">
+        SELECT post.post_id,post.user_id,post.date,post.text,post.title,post.hotPoint,post.current_size,user_login.user_name
+        FROM post,user_login
+        WHERE post.user_id = #{0} and post.user_id = user_login.user_id
+    </select>
+
+    <select id="getUserAnswerPost" resultMap="AnswerPostMap">
+        SELECT *
+        FROM post_answer
+        WHERE user_id = #{0}
+    </select>
+
+</mapper>

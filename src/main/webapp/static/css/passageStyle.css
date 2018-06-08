@@ -1,0 +1,129 @@
+.passage-input{
+    padding: 5px;
+    border:none;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 0 1px rgba(0,0,0,0.5);
+    transition: all ease 0.2s;
+    outline: none;
+}
+.passage-input:focus{
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+.passage-input-title{
+    width: 60%;
+
+}
+.passage-input-wrap{
+    padding: 20px;
+    height: 100%;
+    position: relative;
+}
+.passage-input-wrap span{
+    font-size: 18px;
+    padding: 3px 0;
+}
+.passage-input-content{
+    resize: none;
+    width: 100%;
+    height: 40%;
+    min-height: 400px;
+}
+
+.passage-avatar {
+    border-radius: 50%;
+    overflow: hidden;
+    width:100px;
+    height:100px;
+}
+.passage-avatar>img{
+    width:100px;
+    height:100px;
+    object-fit: cover;
+}
+.passage-content{
+    padding: 0;
+}
+.passage-wrap{
+    background-color: white;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.4);
+}
+.passage-userinfo-wrap{
+    box-shadow: 2px 3px 10px rgba(0,0,0,0.2);
+    height: 100%;
+    position: relative;
+    padding: 20px;
+    border-bottom-right-radius: 50px;
+    z-index: 10;
+    transition: all ease 0.4s;
+}
+.passage-userinfo-wrap:hover{
+    box-shadow: 2px 3px 12px rgba(0,0,0,0.4);
+}
+.passage-title{
+    position: relative;
+    font-size: 18px;
+    padding: 10px;
+    display: inline-block;
+    width:100%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    z-index:20;
+}
+.passage-text{
+    background-color: white;
+    border:none;
+}
+.passage-comments-create-wrap {
+    margin: 20px 0;
+    background-color: white;
+    border-radius: 10px;
+    min-height: 150px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    vertical-align: bottom;
+}
+.passage-input-content-wrap{
+    min-height:150px;
+}
+.passage-comments-wrap{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    margin: 5px 0;
+    padding: 5px;
+}
+.comment-avatar{
+    width:40px;
+    height:40px;
+}
+.comment-avatar>img{
+    width:40px;
+    height:40px;
+    overflow: hidden;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.comment-content-wrap>pre{
+    border:none;
+    background-color:transparent;
+}
+.comment-seperator{
+    height:5px !important;
+    background-color: white;
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+    box-shadow: inset 0 1px 5px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+.floor{
+    color: gray;
+    margin:0;
+}
+.comment-page {
+    display: none;
+}
+.comment-page.active{
+    display: block;
+}

@@ -1,0 +1,25 @@
+.plate-button{
+    transition: all ease 0.3s;
+    box-shadow: 0 0 0 rgba(0,0,0,0.3);
+    position: relative;
+    vertical-align: bottom;
+    border: none;
+    border-radius: 10px;
+    height: 250px;
+    width: 250px;
+    background: url("../images/icon/plate.png") no-repeat center center;
+    align-content: center;
+}
+.plate-button:hover{
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+.plate-button.active {
+    background-color: rgb(200, 200, 200);
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+}
+.plate-button>span{
+    text-align: center;
+    font-size: 16px;
+    position: relative;
+    display: inline-block;
+}

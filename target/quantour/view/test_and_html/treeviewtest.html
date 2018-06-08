@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>treeview</title>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+    <script src="../../static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../static/treeview/js/bootstrap-treeview.js"></script>
+    <script type="text/javascript" src="../../static/js/basement.js"></script>
+    <link rel="stylesheet" href="../../static/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../static/treeview/css/bootstrap-treeview.css"/>
+    <link rel="stylesheet" href="../../static/css/base-style.css"/>
+</head>
+<body>
+<div id="tree">
+
+</div>
+
+
+<script>
+    $(function () {
+        function getTree() {
+            var tree = [
+                {
+                    text: "Parent 1",
+                    nodes: [
+                        {
+                            text: "Child 1",
+                            nodes: [
+                                {
+                                    text: "Grandchild 1"
+                                },
+                                {
+                                    text: "Grandchild 2"
+                                }
+                            ]
+                        },
+                        {
+                            text: "Child 2"
+                        }
+                    ]
+                },
+                {
+                    text: "Parent 2"
+                },
+                {
+                    text: "Parent 3"
+                },
+                {
+                    text: "Parent 4"
+                },
+                {
+                    text: "Parent 5"
+                }
+            ];
+            return tree;
+
+        }
+        $('#tree').treeview({
+            data: getTree(),         // data is not optional
+            multiSelect: true,
+            hierarchicalCheck:true,
+            propagateCheckEven:true,
+            showCheckBox:true,
+            selectedBackColor:null,
+            selectedColor:null,
+
+
+        });
+
+        var checked=$('#tree').treeview('getChecked');
+        alert(checked);
+    })
+
+
+</script>
+</body>
+</html>

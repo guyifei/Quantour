@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace = "anyeight.dao.UserMapper">
+
+    <resultMap id="user_Collect" type="anyeight.model.User_Collect">
+        <id column="user_id" jdbcType="VARCHAR" property="user_id"/>
+        <collection ofType="String" property="collectStockId">
+            <constructor>
+                <arg column="stockList"/>
+            </constructor>
+        </collection>
+        <collection ofType="String" property="collectStockName">
+            <constructor>
+                <arg column="name"/>
+            </constructor>
+        </collection>
+        <collection ofType="String" property="collectStockIndustry">
+            <constructor>
+                <arg column="industry"/>
+            </constructor>
+        </collection>
+        <collection ofType="String" property="collectStockArea">
+            <constructor>
+                <arg column="area"/>
+            </constructor>
+        </collection>
+    </resultMap>
+
+    <resultMap id="user_info" type="anyeight.model.UserInfo">
+        <id column="user_id" jdbcType="VARCHAR" property="user_id"/>
+        <result column="userName" jdbcType="VARCHAR" property="userName"/>
+        <result column="telephone" jdbcType="VARCHAR" property="telephone"/>
+        <result column="email" jdbcType="VARCHAR" property="email"/>
+        <result column="graph" jdbcType="VARCHAR" property="graph"/>
+    </resultMap>
+
+    <select id="isLogin" resultType="String">
+        SELECT user_id
+        FROM user_login
+        WHERE user_name = #{0} and user_password = #{1}
+    </select>
+
+    <select id="getUserInfo" resultMap="user_info">
+        SELECT *
+        FROM user_info info, user_login login
+        WHERE info.user_id = #{0} and login.user_id = #{0};
+    </select>
+
+    <select id="getUserCollectVO" resultMap="user_Collect">
+        SELECT *
+        FROM user_collect collect ,stock_info info
+        WHERE collect.user_id = #{0} and info.code = collect.stockList;
+    </select>
+
+
+
+    <select id="addUser">
+        INSERT INTO user_login (user_id, user_name, user_password)
+        VALUES ((SELECT id
+                 FROM create_id
+                 WHERE id_type = 'user')+1,#{0},#{1});
+        INSERT INTO user_info (user_id, telephone, email, graph)
+        VALUES ((SELECT id
+                 FROM create_id
+                 WHERE id_type = 'user')+1, null, #{2}, null);
+        UPDATE create_id SET id= (SELECT user_id
+                                  FROM user_login
+                                  ORDER BY user_id DESC
+                                  LIMIT 1)
+        WHERE id_type = 'user';
+    </select>
+
+    <select id="checkUserName" resultType="Boolean">
+        select count(*) from user_login WHERE user_name = #{0};
+    </select>
+
+    <select id="modifyInfo" parameterType="anyeight.model.UserInfo" resultType="Boolean">
+        select count(*) from user_login WHERE user_id = #{user_id};
+        UPDATE user_login SET user_name = #{userName} WHERE user_id = #{user_id};
+        UPDATE user_info SET telephone = #{telephone},
+                              email = #{email},
+                              graph = #{graph}
+                          WHERE user_id = #{user_id}
+    </select>
+
+    <select id="modifyPassword" resultType="Boolean">
+        select count(*) from user_login WHERE user_id = #{0};
+        UPDATE user_login SET user_password = #{1} WHERE user_id = #{0};
+    </select>
+
+    <select id="getIdByCookie" resultType="String">
+        SELECT user_id
+        FROM cookie
+        WHERE cookie = #{0}
+    </select>
+
+    <insert id="addCookie" useGeneratedKeys = "true">
+        INSERT INTO cookie (user_id,cookie,create_time, stay_time)
+                VALUES
+                    (#{0}, #{1}, #{2}, #{3})
+        ON DUPLICATE KEY UPDATE
+            cookie = values(cookie),
+            create_time = values(create_time),
+            stay_time = values(stay_time)
+    </insert>
+
+    <select id="checkUserCollection" resultType="Boolean">
+        SELECT count(*)
+        FROM user_collect
+        WHERE user_id = #{0} and stockList = #{1}
+    </select>
+
+    <insert id="addCollectStock">
+        INSERT INTO user_collect(user_id, stockList)
+                VALUES (#{0},#{1})
+    </insert>
+
+    <delete id="delCollectStock">
+        DELETE
+        FROM user_collect
+        WHERE user_id = #{0} and stockList = #{1}
+    </delete>
+
+</mapper>
+
+
