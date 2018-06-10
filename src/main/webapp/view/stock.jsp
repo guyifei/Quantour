@@ -508,12 +508,13 @@
             <h4>近期公告</h4>
             <c:set var="col" value="0"/>
             <c:set var="newsPerCol" value="9"/>
-            <c:set var="size" value="${18}"/>
+            <c:set var="size" value="${newsList.size()}"/>
             <c:forEach var="nowCol" begin="0" end="${(size-size%newsPerCol)/newsPerCol}">
                 <div class="col-md-6">
                     <ul class="news-single">
                         <c:forEach var="i" begin="0" end="${newsPerCol-1}">
-                            <c:set var="index" value="${nowCol*newsPerCol+i}"/>
+                            <c:set var="index"
+                                   value="${nowCol*newsPerCol+i}"/>
                             <c:if test="${index<size}">
                                 <li>
                                     <a href="${newsList.get(index).url}"><span class="title" title="${newsList.get(index).title}">${newsList.get(index).title}</span><br/><span class="date">${newsList.get(index).time}</span></a>
