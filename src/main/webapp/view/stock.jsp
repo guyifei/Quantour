@@ -517,7 +517,7 @@
                                    value="${nowCol*newsPerCol+i}"/>
                             <c:if test="${index<size}">
                                 <li>
-                                    <a href="${newsList.get(index).url}"><span class="title" title="${newsList.get(index).title}">${newsList.get(index).title}</span><br/><span class="date">${newsList.get(index).time}</span></a>
+                                    <%--<a href="${newsList.get(index).url}"><span class="title" title="${newsList.get(index).title}">${newsList.get(index).title}</span><br/><span class="date">${newsList.get(index).time}</span></a>--%>
                                 </li>
                             </c:if>
                         </c:forEach>

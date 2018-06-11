@@ -112,6 +112,7 @@ public class StockContoller {
         SimpleDateFormat format= new SimpleDateFormat("yyyy-MM-dd");
         Date end=format.parse(endDate);
         Date start=format.parse(startDate);
+        stockname = stockname.split("/")[0];
         List<StockVO> stocks=stockService.getStockInfo(stockname,start,end);
         jsonTrans trans=new jsonTrans();
         String result=trans.stockCompare(stocks);
@@ -124,6 +125,7 @@ public class StockContoller {
         SimpleDateFormat format= new SimpleDateFormat("yyyy-MM-dd");
         Date end=format.parse(endDate);
         Date start=format.parse(startDate);
+        stockname = stockname.split("/")[0];
         CompareVO compare=stockService.getCompare(stockname,start,end);
         return new Gson().toJson(compare);
     }

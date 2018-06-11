@@ -9,9 +9,7 @@ import anyeight.vo.StockVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.sql.*;
 import java.util.*;
-import java.util.Date;
 
 /**
  * Created by 啊 on 2017/5/11.
@@ -64,9 +62,9 @@ public class StockServiceImpl implements StockService{
                     List<Stock> arrayList = stockMapper.getOneStock(id, MathHelper.utilToSql(beforeStartCalendar), MathHelper.utilToSql(beforeStartCalendar));
                     if(arrayList!=null)
                         exBeginClose = arrayList.get(0).getAdjClose();
-                }
-                else
+                } else {
                     return compareVO;
+                }
                 if(exBeginClose!=-10000.0)
                     return calCompare(stocks, exBeginClose);
                 else

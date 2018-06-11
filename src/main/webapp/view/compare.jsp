@@ -459,10 +459,10 @@
 
         document.getElementById("stockNameA").innerHTML=infoA.name;
         document.getElementById("stockIDA").innerHTML=infoA.stockID;
-        document.getElementById("logarithmicA").innerHTML=infoA.logarithmicYieldVariance.toFixed(4);
+        document.getElementById("logarithmicA").innerHTML=infoA.logarithmicYieldVariance;
         document.getElementById("stockNameB").innerHTML=infoB.name;
         document.getElementById("stockIDB").innerHTML=infoB.stockID;
-        document.getElementById("logarithmicB").innerHTML=infoB.logarithmicYieldVariance.toFixed(4);
+        document.getElementById("logarithmicB").innerHTML=infoB.logarithmicYieldVariance;
 
     }
 
