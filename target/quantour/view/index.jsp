@@ -422,7 +422,7 @@
                         <c:forEach var="i" begin="0" end="2">
                             <tr class="list-group-item tline">
                                 <td class="column">
-                                    <a href="/stock?stockname=${stockList[0].get(i).name}">${stockList[1].get(i).name}<br/>${stockList[1].get(i).code}</a>
+                                    <a href="/stock?stockname=${stockList[0].get(i).name}">${stockList[0].get(i).name}<br/>${stockList[0].get(i).code}</a>
                                 </td>
                                 <td class="column"><fmt:formatNumber value="${(stockList[1].get(i).close-stockList[1].get(i).open)/stockList[1].get(i).open}" pattern="#0.0000"/></td>
                                 <td class="column">${stockList[1].get(i).open}</td>
@@ -447,7 +447,7 @@
                         <c:forEach var="i" begin="0" end="2">
                             <tr class="list-group-item tline">
                                 <td class="column">
-                                    <a href="/stock?stockname=${stockList[0].get(i).name}">${stockList[2].get(i).name}<br/>${stockList[2].get(i).code}</a>
+                                    <a href="/stock?stockname=${stockList[0].get(i).name}">${stockList[0].get(i).name}<br/>${stockList[0].get(i).code}</a>
                                 </td>
                                 <td class="column"><fmt:formatNumber value="${(stockList[2].get(i).close-stockList[2].get(i).open)/stockList[2].get(i).open}" pattern="#0.0000"/></td>
                                 <td class="column">${stockList[2].get(i).open}</td>

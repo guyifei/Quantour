@@ -55,8 +55,8 @@ public class MysqlData implements MysqlDataService {
         Date date = null;
         Date dateEnd = null;
         try {
-            date = sdf.parse("2017-06-14");
-            dateEnd = sdf.parse("2017-06-14");
+            date = sdf.parse("2018-03-01");
+            dateEnd = sdf.parse("2018-06-13");
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -84,9 +84,11 @@ public class MysqlData implements MysqlDataService {
             double ans = 0;
             double i = 0;
             for(String str : set){
+                ans = 0;
+                i = 0;
                 list = map.get(str);
                 for(Stock stock : list){
-                    ans += stock.getTurnover();
+                    ans += stock.getVolome();
                     i++;
                 }
                 if(i == 0){
@@ -96,8 +98,7 @@ public class MysqlData implements MysqlDataService {
                 }
 
                 mapForList.put(ans,str);
-                ans = 0;
-                i = 0;
+                System.out.println("ha");
             }
 
 
@@ -172,8 +173,8 @@ public class MysqlData implements MysqlDataService {
         Date dateEnd = null;
         Calendar calendar1 = Calendar.getInstance();
         try {
-            date = sdf.parse("2017-06-14");
-            dateEnd = sdf.parse("2017-06-14");
+            date = sdf.parse("2018-03-01");
+            dateEnd = sdf.parse("2018-06-13");
         } catch (ParseException e) {
             e.printStackTrace();
         }

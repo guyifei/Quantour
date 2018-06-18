@@ -9,22 +9,13 @@
   <component name="ChangeListManager">
     <list default="true" id="de76aa15-0e73-425b-b4cf-47d23e5a35b0" name="Default" comment="数据库">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Quantour_iter.3.iml" afterPath="$PROJECT_DIR$/Quantour_iter.3.iml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/anyeight/controller/StockContoller.java" afterPath="$PROJECT_DIR$/src/main/java/anyeight/controller/StockContoller.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/anyeight/serviceImpl/StockServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/anyeight/serviceImpl/StockServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/anyeight/serviceImpl/MysqlData.java" afterPath="$PROJECT_DIR$/src/main/java/anyeight/serviceImpl/MysqlData.java" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/jdbc.properties" afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/compare.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/view/compare.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/stock.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/view/stock.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/classes/anyeight/controller/StockContoller.class" afterPath="$PROJECT_DIR$/target/classes/anyeight/controller/StockContoller.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/anyeight/serviceImpl/StockServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/anyeight/serviceImpl/StockServiceImpl.class" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/view/index.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/classes/anyeight/serviceImpl/MysqlData.class" afterPath="$PROJECT_DIR$/target/classes/anyeight/serviceImpl/MysqlData.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/jdbc.properties" afterPath="$PROJECT_DIR$/target/classes/jdbc.properties" />
       <change beforePath="$PROJECT_DIR$/target/quantour.war" afterPath="$PROJECT_DIR$/target/quantour.war" />
-      <change beforePath="$PROJECT_DIR$/target/quantour/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/quantour/META-INF/MANIFEST.MF" />
-      <change beforePath="$PROJECT_DIR$/target/quantour/WEB-INF/classes/anyeight/controller/StockContoller.class" afterPath="$PROJECT_DIR$/target/quantour/WEB-INF/classes/anyeight/controller/StockContoller.class" />
-      <change beforePath="$PROJECT_DIR$/target/quantour/WEB-INF/classes/anyeight/serviceImpl/StockServiceImpl.class" afterPath="$PROJECT_DIR$/target/quantour/WEB-INF/classes/anyeight/serviceImpl/StockServiceImpl.class" />
-      <change beforePath="$PROJECT_DIR$/target/quantour/WEB-INF/classes/jdbc.properties" afterPath="$PROJECT_DIR$/target/quantour/WEB-INF/classes/jdbc.properties" />
-      <change beforePath="$PROJECT_DIR$/target/quantour/view/compare.jsp" afterPath="$PROJECT_DIR$/target/quantour/view/compare.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/quantour/view/stock.jsp" afterPath="$PROJECT_DIR$/target/quantour/view/stock.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/quantour/view/index.jsp" afterPath="$PROJECT_DIR$/target/quantour/view/index.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,100 +39,110 @@
       <file leaf-file-name="jdbc.properties" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="598">
-              <caret line="26" column="49" lean-forward="false" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
+            <state relative-caret-position="196">
+              <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/view/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5681">
-              <caret line="247" column="31" lean-forward="false" selection-start-line="247" selection-start-column="26" selection-end-line="247" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="stock.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/view/stock.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11960">
-              <caret line="520" column="36" lean-forward="false" selection-start-line="520" selection-start-column="36" selection-end-line="520" selection-end-column="36" />
+            <state relative-caret-position="-447">
+              <caret line="477" column="72" lean-forward="false" selection-start-line="477" selection-start-column="72" selection-end-line="477" selection-end-column="72" />
               <folding>
-                <marker date="1528633235773" expanded="true" signature="9641:9654" ph="..." />
+                <marker date="1529308992433" expanded="true" signature="7262:7275" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="compare.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/view/compare.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9499">
-              <caret line="413" column="14" lean-forward="false" selection-start-line="413" selection-start-column="10" selection-end-line="413" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StockContoller.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="StockContoller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/anyeight/controller/StockContoller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="129" column="0" lean-forward="false" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+            <state relative-caret-position="196">
+              <caret line="45" column="31" lean-forward="false" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StockServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/anyeight/serviceImpl/StockServiceImpl.java">
+      <file leaf-file-name="MysqlData.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/anyeight/serviceImpl/MysqlData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5106">
-              <caret line="222" column="0" lean-forward="false" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
+            <state relative-caret-position="-522">
+              <caret line="300" column="22" lean-forward="false" selection-start-line="300" selection-start-column="22" selection-end-line="300" selection-end-column="22" />
+              <folding>
+                <element signature="method#marketData#0;class#MysqlData#0" expanded="false" />
+                <element signature="method#getMarketInfo#0;class#MysqlData#0" expanded="false" />
+                <element signature="method#split#0;class#MysqlData#0" expanded="false" />
+                <element signature="method#pythonTest#0;class#MysqlData#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MysqlDataTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/anyeight/daoTest/MysqlDataTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="598">
+              <caret line="41" column="24" lean-forward="false" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CompareVO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/anyeight/vo/CompareVO.java">
+      <file leaf-file-name="CreateDataMap.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CreateDataMap.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="345">
-              <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+              <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+              <folding>
+                <marker date="1528613344889" expanded="true" signature="243:406" ph="INSERT INTO host_plate... " />
+                <marker date="1528613344889" expanded="true" signature="496:796" ph="INSERT INTO market... " />
+                <marker date="1528613344889" expanded="true" signature="867:902" ph="SELECT code stock_info" />
+                <marker date="1528613344889" expanded="true" signature="956:1008" ph="UPDATE stock_info... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MysqlDataService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/anyeight/service/MysqlDataService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="7" column="16" lean-forward="false" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HomeServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/anyeight/serviceImpl/HomeServiceImpl.java">
+      <file leaf-file-name="CreateDataMap.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/anyeight/dao/CreateDataMap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="874">
-              <caret line="48" column="13" lean-forward="false" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="17" />
+            <state relative-caret-position="230">
+              <caret line="14" column="14" lean-forward="false" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/anyeight/controller/MainController.java">
+      <file leaf-file-name="Stock.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/anyeight/model/Stock.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1196">
-              <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+            <state relative-caret-position="621">
+              <caret line="27" column="28" lean-forward="false" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <file leaf-file-name="testClassTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/anyeight/serviceImpl/neuralLearning/testClassTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="12" column="26" lean-forward="false" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+            <state relative-caret-position="207">
+              <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -217,12 +218,10 @@
         <option value="$PROJECT_DIR$/src/main/webapp/static/js/momentum.js" />
         <option value="$PROJECT_DIR$/src/main/java/anyeight/controller/BackComputeController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/js/compare.js" />
-        <option value="$PROJECT_DIR$/src/main/java/anyeight/serviceImpl/MysqlData.java" />
         <option value="$PROJECT_DIR$/src/main/java/anyeight/serviceImpl/strategy/QuantitativeServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/anyeight/serviceImpl/neuralLearning/Garph.java" />
         <option value="$PROJECT_DIR$/src/main/java/anyeight/service/NeuralLearn.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/view/bbs.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/view/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/view/login.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/view/mod.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/view/newpassage.jsp" />
@@ -241,11 +240,13 @@
         <option value="$PROJECT_DIR$/src/main/webapp/view/market.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/anyeight/controller/MainController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/view/backCompute.jsp" />
-        <option value="$PROJECT_DIR$/src/main/resources/jdbc.properties" />
         <option value="$PROJECT_DIR$/src/main/webapp/view/stock.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/view/compare.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/anyeight/serviceImpl/StockServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/anyeight/controller/StockContoller.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/jdbc.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/anyeight/serviceImpl/MysqlData.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/view/index.jsp" />
       </list>
     </option>
   </component>
@@ -285,9 +286,8 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="784" />
+    <option name="width" value="976" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -353,6 +353,24 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="anyeight" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Quantour" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Quantour" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="anyeight" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Quantour" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Quantour" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="anyeight" type="462c0819:PsiDirectoryNode" />
               <item name="serviceImpl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -360,7 +378,30 @@
               <item name="Quantour" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Quantour" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Quantour" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Quantour" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Quantour" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Quantour" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Quantour" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Quantour" type="b2602c69:ProjectViewProjectNode" />
@@ -369,6 +410,62 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Quantour" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Quantour" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Quantour" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Quantour" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Quantour" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Quantour" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="anyeight" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Quantour" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Quantour" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="anyeight" type="462c0819:PsiDirectoryNode" />
+              <item name="daoTest" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Quantour" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Quantour" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="anyeight" type="462c0819:PsiDirectoryNode" />
+              <item name="serviceImpl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Quantour" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Quantour" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="anyeight" type="462c0819:PsiDirectoryNode" />
+              <item name="serviceImpl" type="462c0819:PsiDirectoryNode" />
+              <item name="neuralLearning" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Quantour" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Quantour" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Quantour" type="b2602c69:ProjectViewProjectNode" />
@@ -386,8 +483,8 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -475,6 +572,56 @@
       <option name="PACKAGE_NAME" value="anyeight.serviceImpl" />
       <option name="MAIN_CLASS_NAME" value="anyeight.serviceImpl.FindProperSectionServiceImplTest" />
       <option name="METHOD_NAME" value="findPropperHold" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="MysqlDataTest.testMarketData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="anyeight.daoTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Quantour_iter.3" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="anyeight.daoTest" />
+      <option name="MAIN_CLASS_NAME" value="anyeight.daoTest.MysqlDataTest" />
+      <option name="METHOD_NAME" value="testMarketData" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="MysqlDataTest.testMarketModel" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="anyeight.daoTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Quantour_iter.3" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="anyeight.daoTest" />
+      <option name="MAIN_CLASS_NAME" value="anyeight.daoTest.MysqlDataTest" />
+      <option name="METHOD_NAME" value="testMarketModel" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -989,15 +1136,19 @@
       <arguments />
       <envs />
     </configuration>
-    <list size="3">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Unnamed" />
       <item index="1" class="java.lang.String" itemvalue="Application.jsonTrans" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.FindProperSectionServiceImplTest.findPropperHold" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.MysqlDataTest.testMarketData" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.MysqlDataTest.testMarketModel" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.FindProperSectionServiceImplTest.findPropperHold" />
-        <item index="1" class="java.lang.String" itemvalue="Application.jsonTrans" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.MysqlDataTest.testMarketModel" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.MysqlDataTest.testMarketData" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.FindProperSectionServiceImplTest.findPropperHold" />
+        <item index="3" class="java.lang.String" itemvalue="Application.jsonTrans" />
       </list>
     </recent_temporary>
   </component>
@@ -1075,7 +1226,12 @@
       <workItem from="1528522235921" duration="578000" />
       <workItem from="1528628463226" duration="1416000" />
       <workItem from="1528632541733" duration="3118000" />
-      <workItem from="1528696244720" duration="72000" />
+      <workItem from="1528696244720" duration="1898000" />
+      <workItem from="1528699351749" duration="676000" />
+      <workItem from="1528896458029" duration="598000" />
+      <workItem from="1528941151883" duration="1694000" />
+      <workItem from="1529245204951" duration="2053000" />
+      <workItem from="1529305354025" duration="2372000" />
     </task>
     <task id="LOCAL-00059" summary="柱状图">
       <created>1497077423079</created>
@@ -1427,9 +1583,33 @@
     <history-entry file="FindProperSectionServiceImplTest_findPropperHold - 2017.06.10 at 16h 34m 52s.xml">
       <configuration name="FindProperSectionServiceImplTest.findPropperHold" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="MysqlDataTest_testMarketData - 2018.06.14 at 13h 08m 56s.xml">
+      <configuration name="MysqlDataTest.testMarketData" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MysqlDataTest_testMarketData - 2018.06.14 at 13h 10m 17s.xml">
+      <configuration name="MysqlDataTest.testMarketData" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MysqlDataTest_testMarketData - 2018.06.14 at 13h 14m 34s.xml">
+      <configuration name="MysqlDataTest.testMarketData" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MysqlDataTest_testMarketData - 2018.06.14 at 13h 20m 38s.xml">
+      <configuration name="MysqlDataTest.testMarketData" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MysqlDataTest_testMarketData - 2018.06.17 at 22h 53m 10s.xml">
+      <configuration name="MysqlDataTest.testMarketData" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MysqlDataTest_testMarketModel - 2018.06.14 at 13h 10m 44s.xml">
+      <configuration name="MysqlDataTest.testMarketModel" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MysqlDataTest_testMarketModel - 2018.06.14 at 13h 11m 15s.xml">
+      <configuration name="MysqlDataTest.testMarketModel" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MysqlDataTest_testMarketModel - 2018.06.18 at 01h 54m 02s.xml">
+      <configuration name="MysqlDataTest.testMarketModel" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="390651000" />
+    <option name="totallyTimeSpent" value="399870000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1463,11 +1643,12 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17787914" sideWeight="0.48487142" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37628278" sideWeight="0.48789713" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37628278" sideWeight="0.48789713" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32923076" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19957082" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21298283" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1479,7 +1660,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="EvoSuite" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1676,8 +1856,32 @@
           <properties />
           <option name="timeStamp" value="103" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/anyeight/serviceImpl/MysqlData.java</url>
+          <line>119</line>
+          <properties />
+          <option name="timeStamp" value="104" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/anyeight/serviceImpl/MysqlData.java</url>
+          <line>99</line>
+          <properties />
+          <option name="timeStamp" value="105" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/anyeight/serviceImpl/MysqlData.java</url>
+          <line>100</line>
+          <properties />
+          <option name="timeStamp" value="106" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/anyeight/controller/StockContoller.java</url>
+          <line>52</line>
+          <properties />
+          <option name="timeStamp" value="108" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="104" />
+      <option name="time" value="109" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1686,77 +1890,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/anyeight/serviceImpl/MysqlData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="354" column="13" lean-forward="true" selection-start-line="354" selection-start-column="13" selection-end-line="354" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/anyeight/serviceImpl/strategy/CustomStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.2.RELEASE/spring-web-4.3.2.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="137" column="0" lean-forward="false" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/anyeight/vo/QuantitativeVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-255">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/anyeight/service/QuantitativeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/anyeight/serviceImpl/neuralLearning/Garph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/anyeight/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-179">
-          <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/bbs.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="47" column="71" lean-forward="false" selection-start-line="47" selection-start-column="71" selection-end-line="47" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="46" column="71" lean-forward="false" selection-start-line="46" selection-start-column="71" selection-end-line="46" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/mean.jsp" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/view/mod.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="44" column="71" lean-forward="false" selection-start-line="44" selection-start-column="71" selection-end-line="44" selection-end-column="71" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1848,7 +1985,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1868">
           <caret line="346" column="43" lean-forward="false" selection-start-line="346" selection-start-column="43" selection-end-line="346" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1928,7 +2064,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1936,7 +2071,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1952,7 +2086,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-95">
           <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1960,21 +2093,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1197">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CreateDataMap.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7429">
-          <caret line="323" column="63" lean-forward="false" selection-start-line="323" selection-start-column="63" selection-end-line="323" selection-end-column="63" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1986,21 +2104,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="26" column="49" lean-forward="false" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/view/stock.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="11960">
           <caret line="520" column="36" lean-forward="false" selection-start-line="520" selection-start-column="36" selection-end-line="520" selection-end-column="36" />
-          <folding>
-            <marker date="1528633235773" expanded="true" signature="9641:9654" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2024,7 +2131,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="874">
           <caret line="48" column="13" lean-forward="false" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2032,7 +2138,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2040,23 +2145,136 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9499">
           <caret line="413" column="14" lean-forward="false" selection-start-line="413" selection-start-column="10" selection-end-line="413" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/anyeight/serviceImpl/StockServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5106">
+        <state relative-caret-position="4853">
           <caret line="222" column="0" lean-forward="false" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/anyeight/serviceImpl/FindProperSectionServiceImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/anyeight/serviceImpl/NameListTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/anyeight/serviceImpl/UserServiceImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/anyeight/serviceImpl/StockServiceImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/anyeight/serviceImpl/neuralLearning/testClassTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/anyeight/model/Stock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="27" column="28" lean-forward="false" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/anyeight/dao/CreateDataMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="14" column="14" lean-forward="false" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/anyeight/service/MysqlDataService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="16" lean-forward="false" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CreateDataMap.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+          <folding>
+            <marker date="1528613344889" expanded="true" signature="243:406" ph="INSERT INTO host_plate... " />
+            <marker date="1528613344889" expanded="true" signature="496:796" ph="INSERT INTO market... " />
+            <marker date="1528613344889" expanded="true" signature="867:902" ph="SELECT code stock_info" />
+            <marker date="1528613344889" expanded="true" signature="956:1008" ph="UPDATE stock_info... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/anyeight/daoTest/MysqlDataTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="41" column="24" lean-forward="false" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/anyeight/controller/StockContoller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="129" column="0" lean-forward="false" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+        <state relative-caret-position="196">
+          <caret line="45" column="31" lean-forward="false" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/anyeight/serviceImpl/MysqlData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-522">
+          <caret line="300" column="22" lean-forward="false" selection-start-line="300" selection-start-column="22" selection-end-line="300" selection-end-column="22" />
+          <folding>
+            <element signature="method#marketData#0;class#MysqlData#0" expanded="false" />
+            <element signature="method#getMarketInfo#0;class#MysqlData#0" expanded="false" />
+            <element signature="method#split#0;class#MysqlData#0" expanded="false" />
+            <element signature="method#pythonTest#0;class#MysqlData#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/view/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-447">
+          <caret line="477" column="72" lean-forward="false" selection-start-line="477" selection-start-column="72" selection-end-line="477" selection-end-column="72" />
+          <folding>
+            <marker date="1529308992433" expanded="true" signature="7262:7275" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
