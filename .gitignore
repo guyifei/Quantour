@@ -1,3 +1,4 @@
 .idea/
 src/main/resources/jdbc.properties
 src/main/resources/jdbc.properties
+target/
