@@ -56,8 +56,8 @@ public class StockContoller {
     @ResponseBody
     public String getBoard(String boardname) throws ParseException {
         SimpleDateFormat format= new SimpleDateFormat("yyyy-MM-dd");
-        Date currentDate=format.parse("2017-06-01");
-        Date startDate=format.parse("2016-06-15");
+        Date currentDate=format.parse("2018-06-10");
+        Date startDate=format.parse("2018-03-01");
         List<K_Market> market=stockService.getMarket(boardname,startDate,currentDate);
         jsonTrans trans=new jsonTrans();
         String result=trans.marketTrans(market);

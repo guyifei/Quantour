@@ -351,7 +351,7 @@
             </div>
         </nav>
         <div id="titles" style="top:30%;position:relative;background-color:rgba(255,255,255,0.7);">
-            <div class="header-title" id="title1" style="top:33%;"><p class="p1">欢迎使用</p></div>
+            <%--<div class="header-title" id="title1" style="top:33%;"><p class="p1">欢迎使用</p></div>--%>
             <div class="header-title" id="title2" style="top:35%;"><p class="p1">AnyQuantour</p></div>
             <div class="header-title" id="title3" style="top:37%;"><p class="p1">股票查询系统</p></div>
             <div class="header-title" id="title4" style="top:40%;">
@@ -376,7 +376,7 @@
                             <li class=""><a href="#industry2" onclick="return false" class="list-group-item columnleft">${marketList.get(1)}</a></li>
                             <li class=""><a href="#industry3" onclick="return false" class="list-group-item columnleft">${marketList.get(2)}</a></li>
                         </ul>
-                        <a class="list-group-item" href="/market" style="background-color: #9b9b9b; color:white;">更多</a>
+                        <%--<a class="list-group-item" href="/market" style="background-color: #9b9b9b; color:white;">更多</a>--%>
                     </div>
 
                 </div>
