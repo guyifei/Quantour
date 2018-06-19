@@ -33,7 +33,7 @@
         $(document).ready(function(){
             fillCharts(dataStr);
         });
-        var info={stockname:"<%=request.getAttribute("stockname")%>",startDate:"2016-06-01",endDate:"2017-06-15"};
+        var info={stockname:"<%=request.getAttribute("stockname")%>",startDate:"2018-03-01",endDate:"2018-06-10"};
         //alert(info.stockname);
         var dataStr=${dataStr};
 
