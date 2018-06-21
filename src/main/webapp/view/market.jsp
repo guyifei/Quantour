@@ -34,7 +34,7 @@
         function fetchLine() {
             $.ajax({
                 url:"/function/hot",
-                data:{startDate:"2017-05-15",endDate:"2017-06-13"},
+                data:{startDate:"2018-03-01",endDate:"2018-06-10"},
                 dataType:"json",
                 success:function(result){
                     if(result=="empty"){

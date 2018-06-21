@@ -353,7 +353,7 @@
         <div id="titles" style="top:30%;position:relative;background-color:rgba(255,255,255,0.7);">
             <%--<div class="header-title" id="title1" style="top:33%;"><p class="p1">欢迎使用</p></div>--%>
             <div class="header-title" id="title2" style="top:35%;"><p class="p1">AnyQuantour</p></div>
-            <div class="header-title" id="title3" style="top:37%;"><p class="p1">股票查询系统</p></div>
+            <div class="header-title" id="title3" style="top:37%;"><p class="p1">选股更轻松</p></div>
             <div class="header-title" id="title4" style="top:40%;">
                 <form class="searchwrap-title" action="/stockFunc/search" >
                     <input oninput="ac(this)" autocomplete="off" class="searchbox-title" type="text" name="key" placeholder="搜索股票">
