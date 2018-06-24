@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="../static/css/inputStyle.css"/>
     <link rel="stylesheet" href="../static/css/jquery-ui.min.css"/>
     <link rel="stylesheet" href="../static/css/strategy.css"/>
+    <link rel="stylesheet" href="../static/css/computeStyle.css"/>
     <script type="text/javascript" language="JavaScript">
         window.onload=function(){
             pageLogCheck();
@@ -95,16 +96,33 @@
 
                         </label>
                     </div>
-                    <div class="radio-inline">
-                        <label>
-                            <input type="radio" name="optionsRadios" id="optionsRadios3" value="3" onclick="showList()">自选股票
-                        </label>
-                    </div>
+                    <%--<div class="radio-inline">--%>
+                        <%--<label>--%>
+                            <%--<input type="radio" name="optionsRadios" id="optionsRadios3" value="3" onclick="showList()">自选股票--%>
+                        <%--</label>--%>
+                    <%--</div>--%>
                     <span id="chosenPlate"></span>
                 </div>
             </div>
         </div>
-
+            <div class="row" id="platePanel" style="display: none" align="center">
+                <div class="seperator" style="background-color:black"></div>
+                <div class="col-sm-4">
+                    <div class="plate1-button" id="main-plate" onclick="mainPlate()" align="center">
+                        <span>主板</span>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="plate2-button" id="enterprise-plate" onclick="enterprisePlate()" align="center">
+                        <span>创业板</span>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="plate3-button" id="medium-plate" onclick="mediumPlate()" align="center">
+                        <span>中小板</span>
+                    </div>
+                </div>
+            </div>
             <div class="row">
                 <div class="seperator" style="background-color:black"></div>
                 <td class="col-md-8">
@@ -117,7 +135,7 @@
                             <th class="property condition">指标</th>
                             <th class="property condition">条件</th>
                             <th class="property condition">值</th>
-                            <th class="property condition">操作</th>
+                            <th class="property condition">选择</th>
                         </tr>
                         <tr class="condition-item" data-field="pb">
                             <td class="condition">
@@ -135,7 +153,7 @@
 
                             </td>
                             <td class="condition" align="right">
-                                <span>选择</span>
+
                                 <div class="input-checkbox-wrap" >
                                     <input id="fi1" type="checkbox" name="filterItems" value="1">
                                     <label for="fi1"></label>
@@ -158,7 +176,7 @@
 
                             </td>
                             <td class="condition" align="right">
-                                <span>选择</span>
+
                                 <div class="input-checkbox-wrap" >
                                     <input id="fi2" type="checkbox" name="filterItems" value="2">
                                     <label for="fi2"></label>
@@ -181,7 +199,7 @@
 
                             </td>
                             <td class="condition" align="right">
-                                <span>选择</span>
+
                                 <div class="input-checkbox-wrap" >
                                     <input id="fi3" type="checkbox" name="filterItems" value="3">
                                     <label for="fi3"></label>
@@ -205,7 +223,7 @@
 
                             </td>
                             <td class="condition" align="right">
-                                <span>选择</span>
+
                                 <div class="input-checkbox-wrap" >
                                     <input id="fi4" type="checkbox" name="filterItems" value="4">
                                     <label for="fi4"></label>
@@ -231,7 +249,7 @@
 
                             </td>
                             <td class="condition" align="right">
-                                <span>选择</span>
+
                                 <div class="input-checkbox-wrap" >
                                     <input id="fi5" type="checkbox" name="filterItems" value="5">
                                     <label for="fi5"></label>
@@ -245,7 +263,7 @@
                         <tr class="rank-header">
                             <th class="property condition">指标</th>
                             <th class="property condition">次序</th>
-                            <th class="property condition">操作</th>
+                            <th class="property condition">选择</th>
                         </tr>
                         <tr class="condition-item" data-field="pb">
                             <td class="condition">
@@ -258,7 +276,7 @@
                                 </select>
                             </td>
                             <td class="condition" align="right">
-                                <span>选择</span>
+
                                 <div class="input-checkbox-wrap" >
                                     <input id="ri1" type="checkbox" name="rankItems" value="1">
                                     <label for="ri1"></label>
@@ -276,7 +294,7 @@
                                 </select>
                             </td>
                             <td class="condition" align="right">
-                                <span>选择</span>
+
                                 <div class="input-checkbox-wrap" >
                                     <input id="ri2" type="checkbox" name="rankItems" value="2">
                                     <label for="ri2"></label>
@@ -294,7 +312,7 @@
                                 </select>
                             </td>
                             <td class="condition" align="right">
-                                <span>选择</span>
+
                                 <div class="input-checkbox-wrap" >
                                     <input id="ri3" type="checkbox" name="rankItems" value="3">
                                     <label for="ri3"></label>
@@ -312,7 +330,7 @@
                                 </select>
                             </td>
                             <td class="condition" align="right">
-                                <span>选择</span>
+
                                 <div class="input-checkbox-wrap" >
                                     <input id="ri4" type="checkbox" name="rankItems" value="4">
                                     <label for="ri4"></label>
@@ -330,7 +348,7 @@
                                 </select>
                             </td>
                             <td class="condition" align="right">
-                                <span>选择</span>
+
                                 <div class="input-checkbox-wrap" >
                                     <input id="ri5" type="checkbox" name="rankItems" value="5">
                                     <label for="ri5"></label>
@@ -344,13 +362,13 @@
             </div>
         <div class="row">
             <div class="col-md-4">
-                <div style="margin-top: 40px; margin-bottom: 10px;">
-                    <span class="property">开始日期</span>
-                    <span><input class="property" id="startDate" placeholder="开始日期" required type="text" name="startDate"></span>
+                <div style="margin-top: 20px; margin-bottom: 10px;">
+                    <span >开始日期</span>
+                    <span><input class="property" id="startDate"  required type="text" name="startDate"></span>
                 </div>
                 <div style="margin-top: 10px; margin-bottom: 10px;">
-                    <span class="property">结束日期</span>
-                    <span><input class="property" id="endDate" placeholder="结束日期" required type="text" name="endDate"></span>
+                    <span >结束日期</span>
+                    <span><input class="property" id="endDate"  required type="text" name="endDate"></span>
                 </div>
                 <script type="text/javascript" language="JavaScript">
                     $("#startDate").datepicker({
@@ -360,15 +378,8 @@
                         dateFormat:"yy-mm-dd"
                     })
                 </script>
-                <div style="margin-top: 10px; margin-bottom: 10px;">
-                    <span class="property">形成日期</span>
-                    <span><input class="property" id="form" type="text" name="form"></span>
-                </div>
-                <div style="margin-top: 10px; margin-bottom: 10px;">
-                    <span class="property">持有天数</span>
-                    <span><input class="property" id="hold" type="text" name="hold"></span>
-                </div>
-                <button type="submit" class="btn btn-primary" style="float: left;" onclick="docompute()">下一步</button>
+
+
                 <div><label id="tip" style="margin-top:10px;margin-left: 20px;color: red"></label></div>
                 <div style="display: none">
                     <input type="text" value="0" name="plateNumber" id="plateChecked">
@@ -380,26 +391,22 @@
                     <input type="text" name="rankSelects" id="rankSelects">
                 </div>
             </div>
+            <div class="col-md-4">
+                <div style="margin-top: 20px; margin-bottom: 10px;">
+                    <span>形成日期</span>
+                    <span><input class="property" id="form" type="text" name="form"></span>
+                </div>
+                <div style="margin-top: 10px; margin-bottom: 10px;">
+                    <span >持有天数</span>
+                    <span><input class="property" id="hold" type="text" name="hold"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <button type="submit" class="btn btn-primary" style="float: left;margin-top: 60px;" onclick="docompute()">下一步</button>
+            </div>
         </div>
         </form>
-        <div class="row" id="platePanel" style="display: none" align="center">
-            <div class="seperator" style="background-color:black"></div>
-            <div class="col-sm-4">
-                <div class="plate-button" id="main-plate" onclick="mainPlate()" align="center">
-                    <span>主板</span>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="plate-button" id="enterprise-plate" onclick="enterprisePlate()" align="center">
-                    <span>创业板</span>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="plate-button" id="medium-plate" onclick="mediumPlate()" align="center">
-                    <span>中小板</span>
-                </div>
-            </div>
-        </div>
+
         <%--<div class="row" id="platePanel" style="display: none">--%>
             <%--<div class="seperator" style="background-color:black"></div>--%>
             <%--<div class="col-md-4">--%>

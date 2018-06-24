@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="../static/css/animate.min.css">
     <link rel="stylesheet" href="../static/css/base-style.css"/>
     <link rel="stylesheet" href="../static/css/computeStyle.css"/>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/hint.css/2.5.0/hint.base.css">
     <script type="text/javascript" language="JavaScript">
         window.onload=function(){
             pageLogCheck();
@@ -91,7 +92,7 @@
 <div class="content">
     <div class="container masking" >
         <form action="/backCompute" onsubmit="return toValid()" method="post" >
-            <div class="row" id="inputPanel" style="margin-top: 80px">
+            <div class="row" id="inputPanel" style="margin-top: 60px">
                 <div class="col-md-12">
                     <ul class="nav nav-tabs aw-nav-tabs">
                         <li id="momentumTab" class="active" onclick="toMomentum()"><a href="#">动量策略</a></li>
@@ -99,14 +100,26 @@
                     </ul>
                 </div>
                 <div class="col-md-4">
-                    <h3 style="color: #2aabd2; margin-bottom: 20px">策略回测</h3>
+
+                    <h3 id="momTitle" style="color: #2aabd2; margin-bottom: 20px">动量策略
+                        <a class="status-icon  hint--bottom-right  hint--info" style="background:lightblue" aria-label="动量策略介绍">
+                        <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                            <path fill="#ffffff" d="M12,2A7,7 0 0,1 19,9C19,11.38 17.81,13.47 16,14.74V17A1,1 0 0,1 15,18H9A1,1 0 0,1 8,17V14.74C6.19,13.47 5,11.38 5,9A7,7 0 0,1 12,2M9,21V20H15V21A1,1 0 0,1 14,22H10A1,1 0 0,1 9,21M12,4A5,5 0 0,0 7,9C7,11.05 8.23,12.81 10,13.58V16H14V13.58C15.77,12.81 17,11.05 17,9A5,5 0 0,0 12,4Z" />
+                        </svg>
+                    </a></h3>
+                    <h3 id="meanTitle" style="color: #2aabd2; margin-bottom: 20px;display: none;">均值回归
+                        <a class="status-icon  hint--bottom-right  hint--info" style="background:lightblue" aria-label="均值回归介绍">
+                            <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                <path fill="#ffffff" d="M12,2A7,7 0 0,1 19,9C19,11.38 17.81,13.47 16,14.74V17A1,1 0 0,1 15,18H9A1,1 0 0,1 8,17V14.74C6.19,13.47 5,11.38 5,9A7,7 0 0,1 12,2M9,21V20H15V21A1,1 0 0,1 14,22H10A1,1 0 0,1 9,21M12,4A5,5 0 0,0 7,9C7,11.05 8.23,12.81 10,13.58V16H14V13.58C15.77,12.81 17,11.05 17,9A5,5 0 0,0 12,4Z" />
+                            </svg>
+                        </a></h3>
                     <div class="seperator" style="background-color:black;margin-bottom: 20px"></div>
                     <div style="margin-top: 10px; margin-bottom: 10px;">
-                        <span class="property">开始日期</span>
+                        <span >开始日期</span>
                         <span><input class="property" id="startDate" type="text" name="startDate"></span>
                     </div>
                     <div style="margin-top: 10px; margin-bottom: 10px;">
-                        <span class="property">结束日期</span>
+                        <span >结束日期</span>
                         <span><input class="property" id="endDate" type="text" name="endDate"></span>
                     </div>
                     <script type="text/javascript" language="JavaScript">
@@ -118,11 +131,11 @@
                         })
                     </script>
                     <div style="margin-top: 10px; margin-bottom: 10px;">
-                        <span class="property">形成日期</span>
+                        <span >形成日期</span>
                         <span><input class="property" id="form" type="text" name="form"></span>
                     </div>
                     <div style="margin-top: 10px; margin-bottom: 10px;">
-                        <span class="property">持有天数</span>
+                        <span >持有天数</span>
                         <span><input class="property" id="hold" type="text" name="hold"></span>
                     </div>
                 </div>
@@ -134,11 +147,11 @@
                         <li id="holdTab" onclick="toHold()"><a href="#">按持有期绘制</a></li>
                     </ul>
                     <div id="relationForm" style="margin-top: 10px;">
-                        <span class="property">形成日期</span>
+                        <span >形成日期</span>
                         <span><input class="property"  type="text" name="relationForm"></span>
                     </div>
                     <div id="relationHold" style="margin-top: 10px;display: none;">
-                        <span class="property">持有天数</span>
+                        <span >持有天数</span>
                         <span><input class="property"  type="text" name="relationHold"></span>
                     </div>
 
@@ -157,12 +170,12 @@
 
                         </label>
                     </div>
-                    <div class="radio">
-                        <label>
-                            <input type="radio" name="optionsRadios" id="optionsRadios3" value="3" onclick="showList()">自选股票
+                    <%--<div class="radio">--%>
+                        <%--<label>--%>
+                            <%--<input type="radio" name="optionsRadios" id="optionsRadios3" value="3" onclick="showList()">自选股票--%>
 
-                        </label>
-                    </div>
+                        <%--</label>--%>
+                    <%--</div>--%>
                     <button type="submit" class="btn btn-primary" onclick="doCompute()">下一步</button>
                     <div><label id="tip" style="margin-top: 20px;color: red"></label></div>
                 </div>
@@ -179,17 +192,17 @@
         <div class="row" id="platePanel" style="display: none" align="center">
             <div class="seperator" style="background-color:black"></div>
             <div class="col-sm-4">
-                <div class="plate-button" id="main-plate" onclick="mainPlate()" align="center">
+                <div class="plate1-button" id="main-plate" onclick="mainPlate()" align="center">
                     <span>主板</span>
                 </div>
             </div>
             <div class="col-sm-4">
-                <div class="plate-button" id="enterprise-plate" onclick="enterprisePlate()" align="center">
+                <div class="plate2-button" id="enterprise-plate" onclick="enterprisePlate()" align="center">
                     <span>创业板</span>
                 </div>
             </div>
             <div class="col-sm-4">
-                <div class="plate-button" id="medium-plate" onclick="mediumPlate()" align="center">
+                <div class="plate3-button" id="medium-plate" onclick="mediumPlate()" align="center">
                     <span>中小板</span>
                 </div>
             </div>

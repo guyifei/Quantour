@@ -135,7 +135,17 @@
                                                 <table style="width: 100%;padding: 3px; text-align: center;" align="center" class="info-table">
                                                     <tr>
                                                         <td>涨跌幅</td>
-                                                        <td><fmt:formatNumber value="${(list.get(i*perPage+j).close-list.get(i*perPage+j).open)/list.get(i*perPage+j).open}" pattern="#0.0000"/></td>
+                                                        <c:choose>
+                                                            <c:when test="${((list.get(i*perPage+j).close-list.get(i*perPage+j).open)/list.get(i*perPage+j).open)>0}">
+                                                                <td style="color: red"><fmt:formatNumber value="${(list.get(i*perPage+j).close-list.get(i*perPage+j).open)/list.get(i*perPage+j).open}" pattern="#0.0000"/></td>
+                                                            </c:when>
+                                                            <c:when test="${((list.get(i*perPage+j).close-list.get(i*perPage+j).open)/list.get(i*perPage+j).open)<0}">
+                                                                <td style="color: limegreen"><fmt:formatNumber value="${(list.get(i*perPage+j).close-list.get(i*perPage+j).open)/list.get(i*perPage+j).open}" pattern="#0.0000"/></td>
+                                                            </c:when>
+                                                            <c:otherwise>
+                                                                <td><fmt:formatNumber value="${(list.get(i*perPage+j).close-list.get(i*perPage+j).open)/list.get(i*perPage+j).open}" pattern="#0.0000"/></td>
+                                                            </c:otherwise>
+                                                        </c:choose>
                                                         <td>行业</td>
                                                         <td>${list.get(i*perPage+j).market}</td>
                                                         <td rowspan="3">
@@ -188,13 +198,13 @@
             </div>
             <div id="search-welcome" class="page ${marketList==null?"":"active"}">
                 <div class="col-md-12 search-welcome-wrap" align="center">
-                    <div style="color: #cccccc; font-size: 36px;">或许你可以试试?</div>
+                    <div style="color: #cccccc; font-size: 36px;">或许你可以试试这些板块?</div>
                     <%
                         int count=1;
                     %>
                     <c:forEach var="market" items="${marketList}" varStatus="stat">
                         <c:set var="size" value="<%=(int)(Math.random()*100+75)%>"/>
-                        <a href="/stockFunc/search?key=${market}" id="cir1" class="circle" style="height:${size}px;width: ${size}px;top:<%=Math.random()*300+50%>px;left:<%=Math.random()*3+(count++)*9%>%;background-color: hsl(<%=(int)(Math.random()*360)%>,60%,60%)"><div>${market}</div></a>
+                        <a href="/stockFunc/search?key=${market}" id="cir1" class="circle" style="height:${size}px;width: ${size}px;top:<%=Math.random()*300+50%>px;left:<%=Math.random()*3+(count++)*9%>%;background-color: hsl(<%=(int)(Math.random()*360)%>,60%,60%);opacity:0.75"><div>${market}</div></a>
                     </c:forEach>
                     <%--<a href="/stockFunc/search?key=${marketList.get(0)}" id="cir1" class="circle" style="top:<%=Math.random()*400+50%>px;left:<%=Math.random()*800%>px;background-color: #adccc1"><div>${marketList.get(0)}</div></a>--%>
                     <%--<a href="/stockFunc/search?key=${marketList.get(1)}" id="cir2" class="circle" style="top:<%=Math.random()*400+50%>px;left:<%=Math.random()*800%>px;background-color: #e5db75"><div>${marketList.get(1)}</div></a>--%>

@@ -43,7 +43,7 @@ function getCheckedNodes() {
 
 
 function noneDisplay(){
-    $("#inputPanel").animate({marginTop:'80px'});
+    $("#inputPanel").animate({marginTop:'60px'});
     document.getElementById("platePanel").style="display:none";
     document.getElementById("treePanel").style="display:none";
 }
@@ -57,26 +57,20 @@ function showPlate(){
 
 function mainPlate(){
     document.getElementById("plateChecked").value=1;
-    var a = document.getElementsByClassName("plate-button");
-    for(var i=0;i<3;i++){
-        $(a[i]).removeClass("active");
-    }
     $("#main-plate").addClass("active");
+    $("#medium-plate").removeClass("active");
+    $("#enterprise-plate").removeClass("active");
 }
 function mediumPlate(){
     document.getElementById("plateChecked").value=2;
-    var a = document.getElementsByClassName("plate-button");
-    for(var i=0;i<3;i++){
-        $(a[i]).removeClass("active");
-    }
+    $("#main-plate").removeClass("active");
     $("#medium-plate").addClass("active");
+    $("#enterprise-plate").removeClass("active");
 }
 function enterprisePlate(){
     document.getElementById("plateChecked").value=3;
-    var a = document.getElementsByClassName("plate-button");
-    for(var i=0;i<3;i++){
-        $(a[i]).removeClass("active");
-    }
+    $("#main-plate").removeClass("active");
+    $("#medium-plate").removeClass("active");
     $("#enterprise-plate").addClass("active");
 }
 
@@ -90,12 +84,16 @@ function toMomentum() {
     document.getElementById("strategyNumber").value=1;
     document.getElementById("momentumTab").className="active";
     document.getElementById("meanTab").className="";
+    document.getElementById("momTitle").style="color: #2aabd2; margin-bottom: 20px";
+    document.getElementById("meanTitle").style="color: #2aabd2; margin-bottom: 20px;display: none;";
 }
 
 function toMean() {
     document.getElementById("strategyNumber").value=2;
     document.getElementById("momentumTab").className="";
     document.getElementById("meanTab").className="active";
+    document.getElementById("momTitle").style="color: #2aabd2; margin-bottom: 20px;display:none";
+    document.getElementById("meanTitle").style="color: #2aabd2; margin-bottom: 20px;";
 }
 
 function toForm() {
