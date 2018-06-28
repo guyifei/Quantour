@@ -360,7 +360,92 @@
                     <button class="searchbutton-title" type="submit" id="search_button_header"></button>
                 </form>
             </div>
+
         </div>
+        <div id="down" style="height: 20%;margin-top:19%;background:  transparent;">
+            <canvas id="downCanvas" width="50" height="50">
+            </canvas>
+        </div>
+
+        <style>
+
+            @-moz-keyframes myMove {
+                0% {padding-top:30px;}
+                100% {padding-top:50px;}
+            }
+            @-webkit-keyframes myMove {
+                0% {padding-top:30px;}
+                100% {padding-top:50px;}
+            }
+            @-o-keyframes myMove {
+                0% {padding-top:30px;}
+                100% {padding-top:50px;}
+            }
+            @keyframes myMove {
+                0% {padding-top:30px;}
+                100% {padding-top:50px;}
+            }
+            #down {
+                text-align: center;
+                height: 150px;
+                -moz-animation: myMove 1s linear infinite alternate;
+                -webkit-animation: myMove 1s linear infinite alternate;
+                -o-animation: myMove 1s linear infinite alternate;
+                animation: myMove 1s linear infinite alternate;
+            }
+        </style>
+        <script type="text/javascript" language="JavaScript">
+        function drawDown() {
+        var c = document.getElementById("downCanvas"),
+        cxt = c.getContext("2d");
+        cxt.beginPath();
+        cxt.moveTo(5, 20);
+        cxt.lineTo(25, 45);
+        cxt.lineTo(45, 20);
+        cxt.lineWidth = 5;
+        cxt.strokeStyle = "gray";
+        cxt.lineCap = 'round';
+        cxt.lineJoin = "round";
+        cxt.stroke();
+        cxt.moveTo(5, 5);
+        cxt.lineTo(25, 30);
+        cxt.lineTo(45, 5);
+        cxt.lineWidth = 5;
+        cxt.strokeStyle = "gray";
+        cxt.lineCap = 'round';
+        cxt.lineJoin = "round";
+        cxt.stroke();
+        }
+        drawDown()
+        var absHeight = $(window).height();
+        var scrollTop = 0;
+        $(window).scroll(function () {
+            var st = $(window).scrollTop();
+            if (st > 0) {
+                $("#backToTop").css("display", "block");
+            } else {
+                $("#backToTop").css("display", "none");
+            }
+            //下滚且在第一屏
+            if (st > scrollTop && scrollTop === 0) {
+                $("html,body").animate({scrollTop : scrollTop + absHeight}, 1000);
+            }
+            //上滚且在第二屏
+            if (st < scrollTop && scrollTop === absHeight) {
+                $("html,body").animate({scrollTop : scrollTop - absHeight}, 1000);
+            }
+            //关键代码：判断鼠标中键的滚动方向
+            scrollTop = st;
+        });
+
+//        点击图标：
+        $("#backToTop").click(function () {
+            $("html,body").animate({scrollTop : absHeight}, 1000);
+        });
+        $("#down").click(function () {
+            $("html,body").animate({scrollTop : absHeight}, 1000);
+        });
+        </script>
 
     </div>
 </div>
@@ -485,7 +570,7 @@
         </div>
         <div class="seperator" style="background-color: #5d5d5d;"></div>
         <div class="row">
-            <h4>近期新闻</h4>
+            <h4 style="margin-left: 52px;font-size:25px">近期新闻</h4>
             <c:set var="col" value="0"/>
             <c:set var="newsPerCol" value="10"/>
             <c:forEach var="nowCol" begin="0" end="${(newsList.size()-newsList.size()%newsPerCol)/newsPerCol}">

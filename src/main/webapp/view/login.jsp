@@ -80,17 +80,21 @@
                             <tr>
                                 <td><h4 align="right">保持登录</h4></td>
                                 <td align="right">
-                                    <div class="log-checkbox" style="display: none">
-                                        <input type="checkbox" id="keeplen" name="iskeep">
-                                        <label for="keeplen"></label>
+                                    <div class="" style="margin-right:20px;margin-top: 4px">
+                                        <input type="radio" name="RememberPass" id="oneDay" style="margin-left: 8px" />
+                                        <label for="oneDay" style="margin-left: 5px">1天</label>
+
+                                        <input type="radio" name="RememberPass" id="threeDay"  style="margin-left: 8px"/>
+                                        <label for="threeDay" style="margin-left: 5px">3天</label>
+
+                                        <input type="radio" name="RememberPass" id="sevenDay"  style="margin-left: 8px"/>
+                                        <label for="sevenDay" style="margin-left: 5px">7天</label>
+
+
+                                        <!--<input type="checkbox" id="keeplen" name="keeplength">-->
+                                        <!--<label for="keeplen"></label>-->
                                     </div>
-                                    <select title="login" class="log-input" name="keeplength">
-                                        <option value="-1">不保持</option>
-                                        <option value="1">1天</option>
-                                        <option value="7">1周</option>
-                                        <option value="30">1月</option>
-                                        <option value="90">3月</option>
-                                    </select></td>
+                                </td>
                             </tr>
 
                             <tr>
@@ -106,10 +110,10 @@
 
                     </form>
                 </div>
-                <div class="col-md-12 loginwrap" id="logged">
+                <div class="col-md-12 loginwrap" id="logged" style="height: 200px">
                     <h2 style="text-align: center">登录</h2>
                     <div class="seperator" style="background-color: #1d3c54"></div>
-                    已作为<span id="username"></span>登录, 即将跳转到首页.
+                    <div class="" style="margin-left: 70px">已作为<span id="username"></span>登录, 即将跳转到首页.....<div>
                 </div>
             </div>
             <div class="row" style="height:20%;"></div>

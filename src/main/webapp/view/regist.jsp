@@ -65,8 +65,8 @@
 <div class="content" style="height:80%;">
     <div class="container masking" style="height:100%; background-color: rgba(255,255,255,0);box-shadow: none">
         <div style="height: 100%;">
-            <div class="row" style="height:15%;"></div>
-            <div class="row" style="height:65%; width: 100%; max-width: 400px; margin:auto auto;">
+            <div class="row" style="height:5%;"></div>
+            <div class="row" style="height:90%; width: 100%; max-width: 400px; margin:auto auto;">
                 <div class="col-md-12 loginwrap">
                     <h2 style="text-align: center">注册</h2>
                     <div class="seperator" style="background-color: #1d3c54"></div>
@@ -81,7 +81,7 @@
                                 <td  class="form-tip" colspan="2" id="username-tip"> </td>
                             </tr>
                             <tr>
-                                <td><h4 align="right">密码</h4></td>
+                                <td><h4 align="right">密   码</h4></td>
                                 <td align="right"><input type="password" class="log-input" name="password" title="regist"></td>
                             </tr>
                             <tr>
@@ -113,7 +113,7 @@
                         </table>
 
                     </form>
-                    <div id="info" style="display: none;">
+                    <div id="info" style="display: none;height: 20%">
                         注册成功, 即将跳转至登录界面.
                     </div>
                 </div>
