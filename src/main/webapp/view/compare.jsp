@@ -95,8 +95,10 @@
                 <script type="text/javascript" language="JavaScript">
                     fetchNameList();
                 </script>
-                <input class="compare_input property property-white" type="text" id="startDate" placeholder="开始日期">
-                <input class="compare_input property property-white" type="text" id="endDate" placeholder="结束日期">
+                <%--<input class="compare_input property property-white" type="text" id="startDate" placeholder="开始日期">--%>
+                <%--<input class="compare_input property property-white" type="text" id="endDate" placeholder="结束日期">--%>
+                <input type="date" id="startDate">
+                <input type="date" id="endDate">
                 <script type="text/javascript" language="JavaScript">
                     $("#startDate").datepicker({
                         dateFormat:"yy-mm-dd",
@@ -122,6 +124,12 @@
                     <div class="seperator" style="background-color: lightgrey"></div>
                     <h4>对数收益率方差</h4>
                     <h5 id="logarithmicA"></h5>
+                    <h4>较昨日涨跌幅</h4>
+                    <h5> </h5>
+                    <h4>二十日均价</h4>
+                    <h5> </h5>
+                    <h4>二十日均量</h4>
+                    <h5> </h5>
                 </div>
                 <div class="seperator" style="background-color: grey;width: 100%;"></div>
                 <div class="" style="height: 400px;">
@@ -131,6 +139,12 @@
                     <div class="seperator" style="background-color: lightgrey;"></div>
                     <h4>对数收益率方差</h4>
                     <h5 id="logarithmicB"></h5>
+                    <h4>较昨日涨跌幅</h4>
+                    <h5> </h5>
+                    <h4>二十日均价</h4>
+                    <h5> </h5>
+                    <h4>二十日均量</h4>
+                    <h5> </h5>
                 </div>
             </div>
         </div>
@@ -162,6 +176,18 @@
 
 
 <script type="text/javascript">
+
+    $(document).ready(function(){
+        stockA = document.getElementById("stockA");
+        stockA.value = "000043/中航地产"
+        stockB = document.getElementById("stockB");
+        stockB.value = "000050/深天马Ａ"
+        startDate = document.getElementById("startDate");
+        startDate.value = "2018/03/03"
+        endDate = document.getElementById("endDate");
+        endDate.value = "2018/06/09"
+        doCompare()
+    });
 
     var myChart = echarts.init(document.getElementById('main'));
     var myLog=echarts.init(document.getElementById('log'));
@@ -379,8 +405,6 @@
     }
 
     function doCompare(){
-
-
         var stockAName=$("#stockA").val();
         var stockBName=$("#stockB").val();
         var startDate=$("#startDate").val();
