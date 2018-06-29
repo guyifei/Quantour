@@ -172,32 +172,32 @@
                 </div>
             </div>
 
-        <div class="row">
-                <div class="col-md-12">
-                    <h4 class="title">关系图</h4>
-                    <div class="seperator" style="background-color:black"></div>
-                </div>
-            </div>
-        <div class="row" id="relationPanel">
-                <div class="col-md-6">
-                    <table class="table table-hover">
-                        <thead>
-                        <tr>
-                            <th>相对强弱计算周期</th>
-                            <th>超额收益</th>
-                            <th>一年内胜率</th>
-                        </tr>
-                        </thead>
-                        <tbody id="tbody">
-                        </tbody>
-                    </table>
-                </div>
-                <div class="col-md-6">
-                    <%--用于添加图表--%>
-                    <div id="area_chartA" style="width: 100%;height: 400px; "></div>
-                    <div id="area_chartB" style="width: 100%;height: 400px; "></div>
-                </div>
-            </div>
+        <%--<div class="row">--%>
+                <%--<div class="col-md-12">--%>
+                    <%--<h4 class="title">关系图</h4>--%>
+                    <%--<div class="seperator" style="background-color:black"></div>--%>
+                <%--</div>--%>
+            <%--</div>--%>
+        <%--<div class="row" id="relationPanel">--%>
+                <%--<div class="col-md-6">--%>
+                    <%--<table class="table table-hover">--%>
+                        <%--<thead>--%>
+                        <%--<tr>--%>
+                            <%--<th>相对强弱计算周期</th>--%>
+                            <%--<th>超额收益</th>--%>
+                            <%--<th>一年内胜率</th>--%>
+                        <%--</tr>--%>
+                        <%--</thead>--%>
+                        <%--<tbody id="tbody">--%>
+                        <%--</tbody>--%>
+                    <%--</table>--%>
+                <%--</div>--%>
+                <%--<div class="col-md-6">--%>
+                    <%--&lt;%&ndash;用于添加图表&ndash;%&gt;--%>
+                    <%--<div id="area_chartA" style="width: 100%;height: 400px; "></div>--%>
+                    <%--<div id="area_chartB" style="width: 100%;height: 400px; "></div>--%>
+                <%--</div>--%>
+            <%--</div>--%>
 
 
     </div>
@@ -250,7 +250,7 @@ $(".container.masking").css("filter","blur(5px)");
             $("#loading-wrap").css("display", "none");
             $(".container.masking").css("filter","none");
 
-            doNext();
+//            doNext();
         }
     });
 

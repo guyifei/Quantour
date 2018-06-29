@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="../static/css/ae-animate.css"/>
     <script type="text/javascript">
         fetchLine();
+        fetchCharts();
         var pieChart1;
         var pieChart2;
         var pieChart3;
@@ -34,13 +35,40 @@
         function fetchLine() {
             $.ajax({
                 url:"/function/hot",
-                data:{startDate:"2018-03-01",endDate:"2018-06-10"},
+                data:{startDate:"2018-03-01",endDate:"2018-06-06"},
                 dataType:"json",
                 success:function(result){
                     if(result=="empty"){
 
                     }else{
                         fillLine(result);
+                    }
+
+                }
+            })
+        }
+        function fetchCharts() {
+//            window.alert("chushihua!!!!");
+            var data={date:"2018-06-06"};
+            //alert(data);
+            //fillCharts(data);
+            $.ajax({
+                url:"/function/market",
+                data:data,
+                dataType:"json",
+                success:function(result){
+                    if(result=="empty"){
+                        var list=document.getElementsByClassName("charts-pie");
+                        for(var i=0;i<list.length;i++){
+                            list[i].innerHTML="<div align='center' style='padding-top:35%;margin-left: 0%'>非交易日或无当日数据</div>";
+                        }
+                    }else if(result.totalVolume<=0){
+                        var list=document.getElementsByClassName("charts-pie");
+                        for(var i=0;i<list.length;i++){
+                            list[i].innerHTML="<div align='center' style='padding-top:35%;'>非交易日或无当日数据</div>";
+                        }
+                    }else{
+                        fillCharts(result);
                     }
 
                 }
@@ -110,7 +138,7 @@
             // 绘制图表
             var rad='50%';
             pieChart1.setOption({
-                title:{text:'股票涨跌停情况',padding:[0,0,0,0],textStyle:{fontSize:13, fontWeight:'normal'}},
+                title:{text:'股票涨跌停情况',padding:[18,0,0,0],textStyle:{fontSize:13, fontWeight:'normal'}},
                 tooltip: {},
                 series:[
                     {
@@ -185,7 +213,7 @@
                     if(result=="empty"){
                         var list=document.getElementsByClassName("charts-pie");
                         for(var i=0;i<list.length;i++){
-                            list[i].innerHTML="<div align='center' style='padding-top:35%;'>非交易日或无当日数据</div>";
+                            list[i].innerHTML="<div align='center' style='padding-top:35%;margin-left: 0%'>非交易日或无当日数据</div>";
                         }
                     }else if(result.totalVolume<=0){
                         var list=document.getElementsByClassName("charts-pie");
@@ -277,7 +305,7 @@
 </div>
 <div class="content">
     <div class="container masking">
-        <div class="container">
+        <div class="container" style="width: 880px">
             <div class="row">
                 <div class="col-md-12">
                     <h4 class="title">市场温度计</h4>
@@ -300,11 +328,11 @@
                 <div class="col-md-8"></div>
             </div>
             <div class="row" style="margin-top: 20px;">
-                <div class="col-md-6" align="center">
+                <div class="col-md-6" align="center" style="width: 45%">
                     <div class="charts-pie" id="ratiochart" ></div>
 
                 </div>
-                <div class="col-md-6" align="center">
+                <div class="col-md-6" align="center" style="width: 45%">
                     <div class="charts-pie" id="stopchart"></div>
 
                 </div>
@@ -314,7 +342,7 @@
                     <%--</div>--%>
             </div>
         </div>
-        <div class="container">
+        <div class="container" style="width: 880px">
             <div class="row">
                 <div class="col-md-12">
                     <h4 class="title">市场热度历史总览</h4>
@@ -322,12 +350,12 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-12">
-                    <div id="linechart" style="width:100%;height: 400px"></div>
+                <div class="col-md-12" style="width: 880px">
+                    <div id="linechart" style="width:100%;height: 400px;margin-left: -3%"></div>
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="container" style="width: 880px">
             <div class="row">
                 <div class="col-md-12">
                     <h4 class="title">热门股票</h4>
