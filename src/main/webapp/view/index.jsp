@@ -32,7 +32,8 @@
             var myChart = echarts.init(document.getElementById('kchart'));
             var data = splitData(rawData);
             myChart.setOption(option = {
-                backgroundColor: '#eee',
+                backgroundColor: '#ffffff',
+
                 animation: false,
                 legend: {
                     bottom: 10,
@@ -46,7 +47,7 @@
                     },
                     backgroundColor: 'rgba(245, 245, 245, 0.8)',
                     borderWidth: 1,
-                    borderColor: '#ccc',
+                    borderColor: '#fFfFfF',
                     padding: 10,
                     textStyle: {
                         color: '#000'
@@ -61,7 +62,7 @@
                 axisPointer: {
                     link: {xAxisIndex: 'all'},
                     label: {
-                        backgroundColor: '#777'
+                        backgroundColor: '#f1f1f1'
                     }
                 },
                 toolbox: {
