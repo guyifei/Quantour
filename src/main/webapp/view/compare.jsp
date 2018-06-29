@@ -95,10 +95,10 @@
                 <script type="text/javascript" language="JavaScript">
                     fetchNameList();
                 </script>
-                <%--<input class="compare_input property property-white" type="text" id="startDate" placeholder="开始日期">--%>
-                <%--<input class="compare_input property property-white" type="text" id="endDate" placeholder="结束日期">--%>
-                <input type="date" id="startDate">
-                <input type="date" id="endDate">
+                <input class="compare_input property property-white" type="text" id="startDate" placeholder="开始日期">
+                <input class="compare_input property property-white" type="text" id="endDate" placeholder="结束日期">
+                <%--<input type="date" id="startDate">--%>
+                <%--<input type="date" id="endDate">--%>
                 <script type="text/javascript" language="JavaScript">
                     $("#startDate").datepicker({
                         dateFormat:"yy-mm-dd",
@@ -183,9 +183,9 @@
         stockB = document.getElementById("stockB");
         stockB.value = "000050/深天马Ａ"
         startDate = document.getElementById("startDate");
-        startDate.value = "2018/03/03"
+        startDate.value = "2018-03-03"
         endDate = document.getElementById("endDate");
-        endDate.value = "2018/06/09"
+        endDate.value = "2018-06-09"
         doCompare()
     });
 
