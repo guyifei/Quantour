@@ -302,7 +302,7 @@
 <div class="header-index">
     <div class="headerimage" style="background-image: url('../static/images/headerbackground/header_background_<%=(int)(Math.random()*4)%>.jpg');">
         <nav>
-            <div class="navbar navbar-inverse navbar-fixed-top" id="navbar" style="background-color: transparent;">
+            <div class="navbar navbar-inverse navbar-fixed-top"  >
                 <div>
                     <div class="navbar-header">
                         <a class="navbar-brand" href="#" style="color:white">AnyQuantour</a>
