@@ -95,8 +95,8 @@
                 <script type="text/javascript" language="JavaScript">
                     fetchNameList();
                 </script>
-                <input class="compare_input property property-white" type="text" id="startDate" placeholder="开始日期">
-                <input class="compare_input property property-white" type="text" id="endDate" placeholder="结束日期">
+                <input class="compare_input property property-white" type="date" id="startDate" placeholder="开始日期">
+                <input class="compare_input property property-white" type="date" id="endDate" placeholder="结束日期">
                 <%--<input type="date" id="startDate">--%>
                 <%--<input type="date" id="endDate">--%>
                 <script type="text/javascript" language="JavaScript">
@@ -124,12 +124,12 @@
                     <div class="seperator" style="background-color: lightgrey"></div>
                     <h4>对数收益率方差</h4>
                     <h5 id="logarithmicA"></h5>
-                    <h4>较昨日涨跌幅</h4>
-                    <h5> </h5>
-                    <h4>二十日均价</h4>
-                    <h5> </h5>
-                    <h4>二十日均量</h4>
-                    <h5> </h5>
+                    <h4>昨日最高价</h4>
+                    <h5 id="highA"> </h5>
+                    <h4>昨日最低价</h4>
+                    <h5 id="lowA"> </h5>
+                    <h4>昨日涨跌幅</h4>
+                    <h5 id="changeA"> </h5>
                 </div>
                 <div class="seperator" style="background-color: grey;width: 100%;"></div>
                 <div class="" style="height: 400px;">
@@ -139,12 +139,12 @@
                     <div class="seperator" style="background-color: lightgrey;"></div>
                     <h4>对数收益率方差</h4>
                     <h5 id="logarithmicB"></h5>
-                    <h4>较昨日涨跌幅</h4>
-                    <h5> </h5>
-                    <h4>二十日均价</h4>
-                    <h5> </h5>
-                    <h4>二十日均量</h4>
-                    <h5> </h5>
+                    <h4>昨日最高价</h4>
+                    <h5 id="highB"> </h5>
+                    <h4>昨日最低价</h4>
+                    <h5 id="lowB"> </h5>
+                    <h4>昨日涨跌幅</h4>
+                    <h5 id="changeB"> </h5>
                 </div>
             </div>
         </div>
@@ -422,8 +422,14 @@
             dataType:"json",
             async: false,
             success:function(result){
-//                alert(result);
+               // alert(result);
+                if(result == ""){
+                    // alert("没有数据")
+                    $("#tip").append("第一个股票数据不存在");
+                }
                 dataA=splitData(result);
+
+                // alert(dataA)
             }
         });
         $.ajax({
@@ -432,7 +438,11 @@
             dataType:"json",
             async: false,
             success:function(result){
+                if(result== ""){
+                    $("#tip").append("\r\n  第二个股票数据不存在");
+                }
                 dataB=splitData(result);
+
             }
         });
         $.ajax({
@@ -453,8 +463,6 @@
                 infoB=result;
             }
         });
-
-
         fillCharts();
         fillInfo();
         fillLog();
@@ -479,15 +487,26 @@
         return result;
     }
     function fillInfo() {
-
-
         document.getElementById("stockNameA").innerHTML=infoA.name;
         document.getElementById("stockIDA").innerHTML=infoA.stockID;
-        document.getElementById("logarithmicA").innerHTML=infoA.logarithmicYieldVariance;
+        if(infoA.logarithmicYieldVariance != -1 && infoA.logarithmicYieldVariance != -2){
+            document.getElementById("logarithmicA").innerHTML=infoA.logarithmicYieldVariance;
+        }else{
+            document.getElementById("logarithmicA").innerHTML=null;
+        }
+        document.getElementById("highA").innerHTML=infoA.high;
+        document.getElementById("lowA").innerHTML=infoA.low;
+        document.getElementById("changeA").innerHTML=infoA.change;
         document.getElementById("stockNameB").innerHTML=infoB.name;
         document.getElementById("stockIDB").innerHTML=infoB.stockID;
-        document.getElementById("logarithmicB").innerHTML=infoB.logarithmicYieldVariance;
-
+        if(infoB.logarithmicYieldVariance != -1 && infoB.logarithmicYieldVariance != -2){
+            document.getElementById("logarithmicB").innerHTML=infoB.logarithmicYieldVariance;
+        }else{
+            document.getElementById("logarithmicB").innerHTML=null;
+        }
+        document.getElementById("highB").innerHTML=infoB.high;
+        document.getElementById("lowB").innerHTML=infoB.low;
+        document.getElementById("changeB").innerHTML=infoB.change;
     }
 
     function fillCharts () {

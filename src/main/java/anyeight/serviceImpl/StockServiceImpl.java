@@ -54,7 +54,7 @@ public class StockServiceImpl implements StockService{
         String id=getStockId(idtentification);
         if(id!=null) {
             List<Stock> stocks = stockMapper.getOneStock(id, MathHelper.utilToSql(beginDate), MathHelper.utilToSql(endDate));
-            if(stocks!=null) {
+            if(stocks!=null && stocks.size()!=0) {
                 double exBeginClose = -100000.0;                                                                 //通过多拿一个工作日的收盘价来计算第一天的收益率
                 Date actualBeginDate = stocks.get(stocks.size() - 1).getDate();
                 Date beforeStartCalendar = stockMapper.getExCalendar(id, MathHelper.utilToSql(actualBeginDate), 1);
