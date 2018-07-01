@@ -7,12 +7,19 @@ function regist(username, password, email){
         url:"/add_user",
         data:info,
         method:"post",
+
         success:function(result){
+
             if(result=="success"){
-                $("#form").hide();
+                // alert("okkkk");
+                // $("#tochange").style.height="30%";
+                $("#tohide").hide();
+                // $("#tochange").style.height="30%";
                 $("#info").show();
+                // alert("注册成功，正在转至登录界面");
                 $("body").animate({opacity:1},3000,function(){
                     location.href = "/login";
+
                 })
             }else{
                 alert("用户名已存在");
@@ -72,7 +79,8 @@ function login(thisform){
     with(thisform){
         var us=username.value;
         var pw=$.md5(password.value);
-        _login(us,pw, iskeep.value, keeplength.value);
+
+        _login(us,pw,true, 3);
     }
 }
 function _login(username, pw, iskeep, keeplength){

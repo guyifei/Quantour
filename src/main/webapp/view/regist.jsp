@@ -64,10 +64,10 @@
 </div>
 <div class="content" style="height:80%;">
     <div class="container masking" style="height:100%; background-color: rgba(255,255,255,0);box-shadow: none">
-        <div style="height: 100%;">
+        <div id="tochange" style="height: 100%;">
             <div class="row" style="height:5%;"></div>
-            <div class="row" style="height:90%; width: 100%; max-width: 400px; margin:auto auto;">
-                <div class="col-md-12 loginwrap">
+            <div   class="row" style="height:90%; width: 100%; max-width: 400px; margin:auto auto;">
+                <div id="tohide" class="col-md-12 loginwrap">
                     <h2 style="text-align: center">注册</h2>
                     <div class="seperator" style="background-color: #1d3c54"></div>
                     <form id="form" target="faker">
@@ -113,11 +113,22 @@
                         </table>
 
                     </form>
-                    <div id="info" style="display: none;height: 20%">
-                        注册成功, 即将跳转至登录界面.
+                    <%--<div id="info" style="display: none;height: 100%">--%>
+                        <%--注册成功, 即将跳转至登录界面.--%>
+                    <%--</div>--%>
+                </div>
+                <div class="col-md-12 loginwrap" id="info" style="height: 200px;display: none">
+                    <h2 style="text-align: center">注册</h2>
+                    <div class="seperator" style="background-color: #1d3c54"></div>
+                    <div class="" style="margin-left: 70px">注册成功, 即将跳转到登录界面<div>
                     </div>
+                    </div>
+                    <div class="row" style="height:20%;"></div>
                 </div>
             </div>
+            <%--<div id="info" style="display: none;height: 6%">--%>
+                <%--注册成功, 即将跳转至登录界面.--%>
+            <%--</div>--%>
             <div class="row" style="height:20%;"></div>
         </div>
     </div>

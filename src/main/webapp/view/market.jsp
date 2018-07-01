@@ -171,24 +171,81 @@
             $("#tbody").html("");
             var tbody=document.getElementById("tbody");
             var length=data.length;
+            <%--style="color:${(stockList[0].get(i).close-stockList[0].get(i).open>0)?"#f03740":"#009087"}"--%>
             for(var i=0;i<length;i++){
+//                data[i].pchange.
+//                if(data[i].pchange.split("")[0]=="-"){
+//
+//                }
                 var tr=document.createElement("tr");
-                var td1=document.createElement("td");
-                td1.innerHTML=data[i].code;
-                var td2=document.createElement("td");
-                td2.innerHTML=data[i].name;
-                var td3=document.createElement("td");
-                td3.innerHTML=data[i].pchange;
-                var td4=document.createElement("td");
-                td4.innerHTML=data[i].amount;
-                var td5=document.createElement("td");
-                td5.innerHTML=data[i].buy;
-                var td6=document.createElement("td");
-                td6.innerHTML=data[i].bratio;
-                var td7=document.createElement("td");
-                td7.innerHTML=data[i].sell;
-                var td8=document.createElement("td");
-                td8.innerHTML=data[i].sratio;
+//                alert(data[i].pchange);
+                if(data[i].pchange>0){
+                    var td1=document.createElement("td");
+                    td1.innerHTML=data[i].code;
+//                    td1.style.color="#009087";
+                    var td2=document.createElement("td");
+                    td2.innerHTML=data[i].name;
+//                    td2.style.color="#009087";
+                    var td3=document.createElement("td");
+                    td3.innerHTML=data[i].pchange;
+                    td3.style.color="#009087";
+                    var td4=document.createElement("td");
+                    td4.innerHTML=data[i].amount;
+                    td4.style.color="#009087";
+                    var td5=document.createElement("td");
+                    td5.innerHTML=data[i].buy;
+                    td5.style.color="#009087";
+                    var td6=document.createElement("td");
+                    td6.innerHTML=data[i].bratio;
+                    td6.style.color="#009087";
+                    var td7=document.createElement("td");
+                    td7.innerHTML=data[i].sell;
+                    td7.style.color="#009087";
+                    var td8=document.createElement("td");
+                    td8.innerHTML=data[i].sratio;
+                    td8.style.color="#009087";
+                }else{
+                    var td1=document.createElement("td");
+                    td1.innerHTML=data[i].code;
+//                    td1.style.color="#f03740";
+                    var td2=document.createElement("td");
+                    td2.innerHTML=data[i].name;
+//                    td2.style.color="#f03740";
+                    var td3=document.createElement("td");
+                    td3.innerHTML=data[i].pchange;
+                    td3.style.color="#f03740";
+                    var td4=document.createElement("td");
+                    td4.innerHTML=data[i].amount;
+                    td4.style.color="#f03740";
+                    var td5=document.createElement("td");
+                    td5.innerHTML=data[i].buy;
+                    td5.style.color="#f03740";
+                    var td6=document.createElement("td");
+                    td6.innerHTML=data[i].bratio;
+                    td6.style.color="#f03740";
+                    var td7=document.createElement("td");
+                    td7.innerHTML=data[i].sell;
+                    td7.style.color="#f03740";
+                    var td8=document.createElement("td");
+                    td8.innerHTML=data[i].sratio;
+                    td8.style.color="#f03740";
+                }
+//                var td1=document.createElement("td");
+//                td1.innerHTML=data[i].code;
+//                var td2=document.createElement("td");
+//                td2.innerHTML=data[i].name;
+//                var td3=document.createElement("td");
+//                td3.innerHTML=data[i].pchange;
+//                var td4=document.createElement("td");
+//                td4.innerHTML=data[i].amount;
+//                var td5=document.createElement("td");
+//                td5.innerHTML=data[i].buy;
+//                var td6=document.createElement("td");
+//                td6.innerHTML=data[i].bratio;
+//                var td7=document.createElement("td");
+//                td7.innerHTML=data[i].sell;
+//                var td8=document.createElement("td");
+//                td8.innerHTML=data[i].sratio;
                 tr.appendChild(td1);
                 tr.appendChild(td2);
                 tr.appendChild(td3);
@@ -316,7 +373,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <span style="display: inline-block" class="property">时间选择</span>
-                    <span><input class="property" id="tempDate" type="text" name="date" title="date" onchange="fetchTemp()" formaction=""></span>
+                    <span><input readonly="readonly" class="property" id="tempDate" type="text" name="date" title="date" onchange="fetchTemp()" formaction=""></span>
                 </div>
                 <script type="text/javascript" language="JavaScript">
                     $("#tempDate").datepicker({
