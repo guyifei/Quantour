@@ -82,12 +82,11 @@
     <div class="container">
         <div class="row seperator"></div>
         <div class="row">
-            <div class="col-sm-5 clu">
-                <p>由AnyEight小组制作</p>
-                <p>此网站为课程学习项目, 不允许用于商业用途.</p>
-                <p>NJU Software Institute 2017.5</p>
+            <div class="clu">
+                <p style="font-size: 16px;margin-top: 10px">由AnyEight小组制作 联系我们:943045598@qq.com 814335296@qq.com 1226550411@qq.com</p>
+                <p style="font-size: 16px;">此网站为课程学习项目, 不允许用于商业用途.</p>
+                <p style="font-size: 16px;">NJU Software Institute 2017.5</p>
             </div>
-            <div class="col-sm-7"></div>
         </div>
     </div>
 </footer>

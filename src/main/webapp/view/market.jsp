@@ -329,7 +329,6 @@
                                 <li><a href="/strategy">自定义策略</a></li>
                             </ul>
                         </li>
-                        <li class=""><a href="/neuralLearn">预测</a></li>
                         <li class=""><a href="/bbs">论坛</a></li>
                     </ul>
                     <div class="header-right">
@@ -371,8 +370,8 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4">
-                    <span style="display: inline-block" class="property">时间选择</span>
+                <div class="col-md-8">
+                    <span style="display: inline-block" class="">时间选择</span>
                     <span><input readonly="readonly" class="property" id="tempDate" type="text" name="date" title="date" onchange="fetchTemp()" formaction=""></span>
                 </div>
                 <script type="text/javascript" language="JavaScript">
@@ -448,12 +447,11 @@
     <div class="container">
         <div class="row seperator"></div>
         <div class="row">
-            <div class="col-sm-5 clu">
-                <p>由AnyEight小组制作</p>
-                <p>此网站为课程学习项目, 不允许用于商业用途.</p>
-                <p>NJU Software Institute 2017.5</p>
+            <div class="clu">
+                <p style="font-size: 16px;margin-top: 10px">由AnyEight小组制作 联系我们:943045598@qq.com 814335296@qq.com 1226550411@qq.com</p>
+                <p style="font-size: 16px;">此网站为课程学习项目, 不允许用于商业用途.</p>
+                <p style="font-size: 16px;">NJU Software Institute 2017.5</p>
             </div>
-            <div class="col-sm-7"></div>
         </div>
     </div>
 </footer>

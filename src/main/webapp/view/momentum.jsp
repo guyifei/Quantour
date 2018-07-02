@@ -58,7 +58,6 @@
                                 <li><a href="/strategy">自定义策略</a></li>
                             </ul>
                         </li>
-                        <li class=""><a href="/neuralLearn">预测</a></li>
                         <li class=""><a href="/bbs">论坛</a></li>
                     </ul>
                     <div class="header-right">
@@ -102,13 +101,13 @@
                 <div class="col-md-4">
 
                     <h3 id="momTitle" style="color: #2aabd2; margin-bottom: 20px">动量策略
-                        <a class="status-icon  hint--bottom-right  hint--info" style="background:lightblue" aria-label="动量交易策略，即预先对股票收益和交易量设定过滤准则，当股票收益或股票收益和交易量同时满足过滤准则就买入或卖出股票的投资策略。">
+                        <a class="status-icon  hint--bottom-right  hint--info" style="background:lightblue" data-hint="预先对股票收益和交易量设定过滤准则，当股票收益或股票收益和交易量同时满足过滤准则就买入或卖出股票的投资策略。">
                         <svg style="width:24px;height:24px" viewBox="0 0 24 24">
                             <path fill="#ffffff" d="M12,2A7,7 0 0,1 19,9C19,11.38 17.81,13.47 16,14.74V17A1,1 0 0,1 15,18H9A1,1 0 0,1 8,17V14.74C6.19,13.47 5,11.38 5,9A7,7 0 0,1 12,2M9,21V20H15V21A1,1 0 0,1 14,22H10A1,1 0 0,1 9,21M12,4A5,5 0 0,0 7,9C7,11.05 8.23,12.81 10,13.58V16H14V13.58C15.77,12.81 17,11.05 17,9A5,5 0 0,0 12,4Z" />
                         </svg>
                     </a></h3>
                     <h3 id="meanTitle" style="color: #2aabd2; margin-bottom: 20px;display: none;">均值回归
-                        <a class="status-icon  hint--bottom-right  hint--info" style="background:lightblue" aria-label="均值回归，无论是股票的高和低价格暂时的，股票的价格往往会在一段时间内的平均价格。于是确定一个股票的交易范围，然后计算平均价格使用的分析技术。">
+                        <a class="status-icon  hint--bottom-right  hint--info" style="background:lightblue" aria-label="股票的价格往往会在一段时间内的平均价格,于是确定一个股票的交易范围，然后计算平均价格使用的分析技术。">
                             <svg style="width:24px;height:24px" viewBox="0 0 24 24">
                                 <path fill="#ffffff" d="M12,2A7,7 0 0,1 19,9C19,11.38 17.81,13.47 16,14.74V17A1,1 0 0,1 15,18H9A1,1 0 0,1 8,17V14.74C6.19,13.47 5,11.38 5,9A7,7 0 0,1 12,2M9,21V20H15V21A1,1 0 0,1 14,22H10A1,1 0 0,1 9,21M12,4A5,5 0 0,0 7,9C7,11.05 8.23,12.81 10,13.58V16H14V13.58C15.77,12.81 17,11.05 17,9A5,5 0 0,0 12,4Z" />
                             </svg>
@@ -225,12 +224,11 @@
     <div class="container">
         <div class="row seperator"></div>
         <div class="row">
-            <div class="col-sm-5 clu">
-                <p>由AnyEight小组制作</p>
-                <p>此网站为课程学习项目, 不允许用于商业用途.</p>
-                <p>NJU Software Institute 2017.5</p>
+            <div class="clu">
+                <p style="font-size: 16px;margin-top: 10px">由AnyEight小组制作 联系我们:943045598@qq.com 814335296@qq.com 1226550411@qq.com</p>
+                <p style="font-size: 16px;">此网站为课程学习项目, 不允许用于商业用途.</p>
+                <p style="font-size: 16px;">NJU Software Institute 2017.5</p>
             </div>
-            <div class="col-sm-7"></div>
         </div>
     </div>
 </footer>
