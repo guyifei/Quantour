@@ -61,6 +61,8 @@
 .passage-list-single{
     color: black;
     padding: 15px 5px;
+
+    border-bottom: 4px solid lightblue;
     /*margin: 10px 0;*/
     /*border-radius: 10px;*/
     box-shadow: 0 0 0 rgba(0,0,0,0.3);
@@ -79,7 +81,7 @@
     text-align: center;
     width: 100px;
     border-radius: 5px;
-    background-color: gray;
+    background-color: #337ab7;
     color: white;
     position: relative;
     padding: 10px;

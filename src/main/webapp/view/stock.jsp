@@ -423,24 +423,26 @@
 <div class="content">
     <div class="container masking">
         <div class="row">
-            <input placeholder="起始日期" class="compare_input property property-white" type="text" id="startDate" required>
-            <input placeholder="结束日期" class="compare_input property property-white" type="text" id="endDate" required>
-            <input class="compare_input property property-white" type="text" id="newStock" value="${stockname}" required>
-            <script type="text/javascript" language="JavaScript">
-                $("#startDate").datepicker({
-                    dateFormat:"yy-mm-dd",
-                });
-                $("#endDate").datepicker({
-                    dateFormat:"yy-mm-dd",
-                });
-            </script>
-            <button class="compare_button" type="submit" onclick="doSearch()">搜索</button>
+            <div class="col-md-12" style="margin-top: 10px;">
+                <input placeholder="起始日期" class="compare_input property property-white" type="text" id="startDate" required>
+                <input placeholder="结束日期" class="compare_input property property-white" type="text" id="endDate" required>
+                <input class="compare_input property property-white" type="text" id="newStock" value="${stockname}" required>
+                <script type="text/javascript" language="JavaScript">
+                    $("#startDate").datepicker({
+                        dateFormat:"yy-mm-dd",
+                    });
+                    $("#endDate").datepicker({
+                        dateFormat:"yy-mm-dd",
+                    });
+                </script>
+                <button class="compare_button" type="submit" onclick="doSearch()">搜索</button>
+            </div>
         </div>
         <div class="stock-info" data-spm="2">
             <div>
                 <div class="row" style="position: relative;">
                     <div class="col-md-12 clu">
-                        <div class="stock-info-detail">
+                        <div class="col-md-12 stock-info-detail">
                             <span style="font-size: 28px;">${stockname}</span>
                             <span style="font-size: 28px;margin: 0 5px 0 20px; color:${rise?"#f03740":"#009087"}">${recentPrice}</span>
                             <img style="vertical-align: middle" src="../static/images/icon/${rise?"rise":"decrease"}.png"/>
@@ -450,10 +452,10 @@
                                 <input type="text" name="favor" style="display: none" value="${favor}"/>
                             </button>
                         </div>
-                        <div id="stockInfo_id">${stockId}</div>
-                        <div><span style="background-color: #555555;color: white; border-radius: 5px; padding: 2px 4px;">${stockinfo.market}</span></div>
+                        <div class="col-md-2" id="stockInfo_id" style="font-size: 18px">${stockId}</div>
+                        <div><span style="background-color: #337ab7;color: white; border-radius: 5px; padding: 2px 4px;">${stockinfo.market}</span></div>
 
-                        <h4>最近交易日情况</h4>
+                        <%--<h4>最近交易日情况</h4>--%>
                         <div class="info-wrap">
 
                             <table>
@@ -503,27 +505,27 @@
             </div>
         </div>
         <div class="seperator" style="background-color: #3d3d3d"></div>
-        <div class="row">
-            <h4>近期公告</h4>
-            <c:set var="col" value="0"/>
-            <c:set var="newsPerCol" value="9"/>
-            <c:set var="size" value="${newsList.size()}"/>
-            <c:forEach var="nowCol" begin="0" end="${(size-size%newsPerCol)/newsPerCol}">
-                <div class="col-md-6">
-                    <ul class="news-single">
-                        <c:forEach var="i" begin="0" end="${newsPerCol-1}">
-                            <c:set var="index"
-                                   value="${nowCol*newsPerCol+i}"/>
-                            <c:if test="${index<size}">
-                                <li>
-                                    <%--<a href="${newsList.get(index).url}"><span class="title" title="${newsList.get(index).title}">${newsList.get(index).title}</span><br/><span class="date">${newsList.get(index).time}</span></a>--%>
-                                </li>
-                            </c:if>
-                        </c:forEach>
-                    </ul>
-                </div>
-            </c:forEach>
-        </div>
+        <%--<div class="row">--%>
+            <%--<h4>近期公告</h4>--%>
+            <%--<c:set var="col" value="0"/>--%>
+            <%--<c:set var="newsPerCol" value="9"/>--%>
+            <%--<c:set var="size" value="${newsList.size()}"/>--%>
+            <%--<c:forEach var="nowCol" begin="0" end="${(size-size%newsPerCol)/newsPerCol}">--%>
+                <%--<div class="col-md-6">--%>
+                    <%--<ul class="news-single">--%>
+                        <%--<c:forEach var="i" begin="0" end="${newsPerCol-1}">--%>
+                            <%--<c:set var="index"--%>
+                                   <%--value="${nowCol*newsPerCol+i}"/>--%>
+                            <%--<c:if test="${index<size}">--%>
+                                <%--<li>--%>
+                                    <%--&lt;%&ndash;<a href="${newsList.get(index).url}"><span class="title" title="${newsList.get(index).title}">${newsList.get(index).title}</span><br/><span class="date">${newsList.get(index).time}</span></a>&ndash;%&gt;--%>
+                                <%--</li>--%>
+                            <%--</c:if>--%>
+                        <%--</c:forEach>--%>
+                    <%--</ul>--%>
+                <%--</div>--%>
+            <%--</c:forEach>--%>
+        <%--</div>--%>
         </div>
     </div>
 </div>

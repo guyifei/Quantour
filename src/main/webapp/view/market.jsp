@@ -25,7 +25,14 @@
     <link rel="stylesheet" href="../static/css/jquery-ui.min.css"/>
     <link rel="stylesheet" href="../static/css/base-style.css"/>
     <link rel="stylesheet" href="../static/css/ae-animate.css"/>
+    <link rel="stylesheet" href="../static/css/stock.css"/>
     <script type="text/javascript">
+        $(document).ready(function(){
+            tempDate = document.getElementById("tempDate");
+            tempDate.value = "2018-06-11";
+            fetchTemp();
+        });
+
         fetchLine();
         fetchCharts();
         var pieChart1;
@@ -152,7 +159,7 @@
                 ]
             });
             pieChart2.setOption({
-                title:{text:'股票涨跌情况',padding:[0,0,0,0],textStyle:{fontSize:13, fontWeight:'normal'}},
+                title:{text:'股票涨跌情况',padding:[18,0,0,0],textStyle:{fontSize:13, fontWeight:'normal'}},
                 tooltip: {},
                 series:[
                     {
@@ -372,7 +379,8 @@
             <div class="row">
                 <div class="col-md-8">
                     <span style="display: inline-block" class="">时间选择</span>
-                    <span><input readonly="readonly" class="property" id="tempDate" type="text" name="date" title="date" onchange="fetchTemp()" formaction=""></span>
+                    <%--<span><input readonly="readonly" class="property" id="tempDate" type="date" name="date" title="date" onchange="fetchTemp()" formaction=""></span>--%>
+                    <input class="compare_input property property-white" type="date" id="tempDate" name="date" title="date" onchange="fetchTemp()">
                 </div>
                 <script type="text/javascript" language="JavaScript">
                     $("#tempDate").datepicker({
@@ -381,7 +389,6 @@
                     $("#tempDate").attr("value",new Date().toLocaleDateString());
                     fetchTemp();
                 </script>
-                <div class="col-md-8"></div>
             </div>
             <div class="row" style="margin-top: 20px;">
                 <div class="col-md-6" align="center" style="width: 45%">

@@ -117,7 +117,7 @@
             </div>
             <div class="col-md-4" style="">
                 <div class="" style="height: 400px; ">
-                    <h3>股票信息</h3>
+                    <%--<h3>股票信息</h3>--%>
                     <h4 id="stockNameA"></h4>
                     <h5 id="stockIDA"></h5>
                     <div class="seperator" style="background-color: lightgrey"></div>
@@ -130,9 +130,9 @@
                     <h4>昨日涨跌幅</h4>
                     <h5 id="changeA"> </h5>
                 </div>
-                <div class="seperator" style="background-color: grey;width: 100%;"></div>
+                <%--<div class="seperator" style="background-color: grey;width: 100%;"></div>--%>
                 <div class="" style="height: 400px;">
-                    <h3>股票信息</h3>
+                    <%--<h3>股票信息</h3>--%>
                     <h4 id="stockNameB">  </h4>
                     <h5 id="stockIDB">  </h5>
                     <div class="seperator" style="background-color: lightgrey;"></div>

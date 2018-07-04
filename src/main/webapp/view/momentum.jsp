@@ -115,11 +115,11 @@
                     <div class="seperator" style="background-color:black;margin-bottom: 20px"></div>
                     <div style="margin-top: 10px; margin-bottom: 10px;">
                         <span >开始日期</span>
-                        <span><input class="property" id="startDate" type="text" name="startDate"></span>
+                        <span><input class="property property-white" id="startDate" type="date" name="startDate"></span>
                     </div>
                     <div style="margin-top: 10px; margin-bottom: 10px;">
                         <span >结束日期</span>
-                        <span><input class="property" id="endDate" type="text" name="endDate"></span>
+                        <span><input class="property property-white" id="endDate" type="date" name="endDate"></span>
                     </div>
                     <script type="text/javascript" language="JavaScript">
                         $("#startDate").datepicker({
@@ -131,11 +131,11 @@
                     </script>
                     <div style="margin-top: 10px; margin-bottom: 10px;">
                         <span >形成日期</span>
-                        <span><input class="property" id="form" type="text" name="form"></span>
+                        <span><input class="property property-white" id="form" type="text" name="form"></span>
                     </div>
                     <div style="margin-top: 10px; margin-bottom: 10px;">
                         <span >持有天数</span>
-                        <span><input class="property" id="hold" type="text" name="hold"></span>
+                        <span><input class="property property-white" id="hold" type="text" name="hold"></span>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -147,11 +147,11 @@
                     </ul>
                     <div id="relationForm" style="margin-top: 10px;">
                         <span >形成日期</span>
-                        <span><input class="property"  type="text" name="relationForm"></span>
+                        <span><input class="property property-white"  type="text" name="relationForm"></span>
                     </div>
                     <div id="relationHold" style="margin-top: 10px;display: none;">
                         <span >持有天数</span>
-                        <span><input class="property"  type="text" name="relationHold"></span>
+                        <span><input class="property property-white"  type="text" name="relationHold"></span>
                     </div>
 
                 </div>
