@@ -29,7 +29,7 @@
     <script type="text/javascript">
         $(document).ready(function(){
             tempDate = document.getElementById("tempDate");
-            tempDate.value = "2018-06-11";
+            tempDate.value = "2018-05-24";
             fetchTemp();
         });
 
@@ -188,7 +188,12 @@
 //                alert(data[i].pchange);
                 if(data[i].pchange>0){
                     var td1=document.createElement("td");
-                    td1.innerHTML=data[i].code;
+                    td1.innerHTML="";
+                    var a=document.createElement("a");
+                    var node=document.createTextNode(data[i].code);
+                    a.appendChild(node);
+                    a.setAttribute("href","/stock?stockname="+data[i].name);
+                    td1.appendChild(a);
 //                    td1.style.color="#009087";
                     var td2=document.createElement("td");
                     td2.innerHTML=data[i].name;
@@ -213,7 +218,12 @@
                     td8.style.color="#009087";
                 }else{
                     var td1=document.createElement("td");
-                    td1.innerHTML=data[i].code;
+                    td1.innerHTML="";
+                    var a=document.createElement("a");
+                    var node=document.createTextNode(data[i].code);
+                    a.appendChild(node);
+                    a.setAttribute("href","/stock?stockname="+data[i].name);
+                    td1.appendChild(a);
 //                    td1.style.color="#f03740";
                     var td2=document.createElement("td");
                     td2.innerHTML=data[i].name;
