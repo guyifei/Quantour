@@ -188,7 +188,7 @@
                             <tr>
                                 <td><button id="button-confirm" onclick="confirmEdit()" style="background: url('../static/images/icon/confirm.png') no-repeat center center;"></button></td>
                                 <td><button class="active" id="button-cancel" onclick="startEdit()" style="background: url('../static/images/icon/edit.png') no-repeat center center;"></button></td>
-                                <td><button class="active" id="button-changepw" style="background: url('../static/images/icon/password.png') no-repeat center center;"></button></td>
+                                <%--<td><button class="active" id="button-changepw" style="background: url('../static/images/icon/password.png') no-repeat center center;"></button></td>--%>
                             </tr>
                         </table>
                     </div>

@@ -118,7 +118,7 @@
             <div class="col-md-4" style="">
                 <div class="" style="height: 400px; ">
                     <%--<h3>股票信息</h3>--%>
-                    <h4 id="stockNameA"></h4>
+                    <h3 id="stockNameA"></h3>
                     <h5 id="stockIDA"></h5>
                     <div class="seperator" style="background-color: lightgrey"></div>
                     <h4>对数收益率方差</h4>
@@ -133,7 +133,7 @@
                 <%--<div class="seperator" style="background-color: grey;width: 100%;"></div>--%>
                 <div class="" style="height: 400px;">
                     <%--<h3>股票信息</h3>--%>
-                    <h4 id="stockNameB">  </h4>
+                    <h3 id="stockNameB">  </h3>
                     <h5 id="stockIDB">  </h5>
                     <div class="seperator" style="background-color: lightgrey;"></div>
                     <h4>对数收益率方差</h4>
@@ -488,23 +488,23 @@
         document.getElementById("stockNameA").innerHTML=infoA.name;
         document.getElementById("stockIDA").innerHTML=infoA.stockID;
         if(infoA.logarithmicYieldVariance != -1 && infoA.logarithmicYieldVariance != -2){
-            document.getElementById("logarithmicA").innerHTML=infoA.logarithmicYieldVariance;
+            document.getElementById("logarithmicA").innerHTML=infoA.logarithmicYieldVariance.toFixed(4);
         }else{
             document.getElementById("logarithmicA").innerHTML=null;
         }
         document.getElementById("highA").innerHTML=infoA.high;
         document.getElementById("lowA").innerHTML=infoA.low;
-        document.getElementById("changeA").innerHTML=infoA.change;
+        document.getElementById("changeA").innerHTML=infoA.change.toFixed(4);
         document.getElementById("stockNameB").innerHTML=infoB.name;
         document.getElementById("stockIDB").innerHTML=infoB.stockID;
         if(infoB.logarithmicYieldVariance != -1 && infoB.logarithmicYieldVariance != -2){
-            document.getElementById("logarithmicB").innerHTML=infoB.logarithmicYieldVariance;
+            document.getElementById("logarithmicB").innerHTML=infoB.logarithmicYieldVariance.toFixed(4);
         }else{
             document.getElementById("logarithmicB").innerHTML=null;
         }
         document.getElementById("highB").innerHTML=infoB.high;
         document.getElementById("lowB").innerHTML=infoB.low;
-        document.getElementById("changeB").innerHTML=infoB.change;
+        document.getElementById("changeB").innerHTML=infoB.change.toFixed(4);
     }
 
     function fillCharts () {
