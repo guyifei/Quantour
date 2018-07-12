@@ -403,7 +403,7 @@
         cxt.lineTo(25, 45);
         cxt.lineTo(45, 20);
         cxt.lineWidth = 5;
-        cxt.strokeStyle = "gray";
+        cxt.strokeStyle = "white";
         cxt.lineCap = 'round';
         cxt.lineJoin = "round";
         cxt.stroke();
@@ -411,7 +411,7 @@
         cxt.lineTo(25, 30);
         cxt.lineTo(45, 5);
         cxt.lineWidth = 5;
-        cxt.strokeStyle = "gray";
+        cxt.strokeStyle = "white";
         cxt.lineCap = 'round';
         cxt.lineJoin = "round";
         cxt.stroke();
@@ -431,9 +431,9 @@
                 $("html,body").animate({scrollTop : scrollTop + absHeight}, 1000);
             }
             //上滚且在第二屏
-            if (st < scrollTop && scrollTop === absHeight) {
-                $("html,body").animate({scrollTop : scrollTop - absHeight}, 1000);
-            }
+//            if (st < scrollTop && scrollTop === absHeight) {
+//                $("html,body").animate({scrollTop : scrollTop - absHeight}, 1000);
+//            }
             //关键代码：判断鼠标中键的滚动方向
             scrollTop = st;
         });

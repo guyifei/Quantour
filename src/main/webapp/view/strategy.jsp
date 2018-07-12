@@ -124,17 +124,17 @@
             </div>
             <div class="row">
                 <div class="seperator" style="background-color:black"></div>
-                <td class="col-md-8">
+                <div class="col-md-10">
                     <ul class="nav nav-tabs aw-nav-tabs">
                         <li id="filterTab" class="active" onclick="toFilter()"><a href="#">筛选条件</a></li>
                         <li id="rankTab" onclick="toRank()"><a href="#">排名条件</a></li>
                     </ul>
                     <table id="filterPanel" class="active" cellspacing="5">
                         <tr class="rank-header">
-                            <th class="property condition">指标</th>
-                            <th class="property condition">条件</th>
-                            <th class="property condition">值</th>
-                            <th class="property condition">选择</th>
+                            <th class="property condition col-md-2" style="background-color:#337ab7">指标</th>
+                            <th class="property condition col-md-3" style="background-color:#337ab7">条件</th>
+                            <th class="property condition col-md-3" style="background-color:#337ab7">值</th>
+                            <th class="property condition col-md-2" style="background-color:#337ab7">选择</th>
                         </tr>
                         <tr class="condition-item" data-field="pb">
                             <td class="condition">
@@ -151,7 +151,7 @@
                                 <input type="text" class="input_value" name="filterValue">
 
                             </td>
-                            <td class="condition" align="right">
+                            <td class="condition" align="left">
 
                                 <div class="input-checkbox-wrap" >
                                     <input id="fi1" type="checkbox" name="filterItems" value="1">
@@ -174,7 +174,7 @@
                                 <input type="text" class="input_value" name="filterValue">
 
                             </td>
-                            <td class="condition" align="right">
+                            <td class="condition" align="left">
 
                                 <div class="input-checkbox-wrap" >
                                     <input id="fi2" type="checkbox" name="filterItems" value="2">
@@ -197,7 +197,7 @@
                                 <input type="text" class="input_value" name="filterValue">
 
                             </td>
-                            <td class="condition" align="right">
+                            <td class="condition" align="left">
 
                                 <div class="input-checkbox-wrap" >
                                     <input id="fi3" type="checkbox" name="filterItems" value="3">
@@ -221,7 +221,7 @@
                                 <input type="text" class="input_value" name="filterValue">
 
                             </td>
-                            <td class="condition" align="right">
+                            <td class="condition" align="left">
 
                                 <div class="input-checkbox-wrap" >
                                     <input id="fi4" type="checkbox" name="filterItems" value="4">
@@ -247,7 +247,7 @@
                                 <input type="text" class="input_value" name="filterValue">
 
                             </td>
-                            <td class="condition" align="right">
+                            <td class="condition" align="left">
 
                                 <div class="input-checkbox-wrap" >
                                     <input id="fi5" type="checkbox" name="filterItems" value="5">
@@ -260,9 +260,9 @@
                     </table>
                     <table id="rankPanel" style="">
                         <tr class="rank-header">
-                            <th class="property condition">指标</th>
-                            <th class="property condition">次序</th>
-                            <th class="property condition">选择</th>
+                            <th class="property condition" style="background-color:#337ab7">指标</th>
+                            <th class="property condition" style="background-color:#337ab7">次序</th>
+                            <th class="property condition" style="background-color:#337ab7">选择</th>
                         </tr>
                         <tr class="condition-item" data-field="pb">
                             <td class="condition">
@@ -274,7 +274,7 @@
                                     <option value="des">从大到小</option>
                                 </select>
                             </td>
-                            <td class="condition" align="right">
+                            <td class="condition" align="left">
 
                                 <div class="input-checkbox-wrap" >
                                     <input id="ri1" type="checkbox" name="rankItems" value="1">
@@ -292,7 +292,7 @@
                                     <option value="des">从大到小</option>
                                 </select>
                             </td>
-                            <td class="condition" align="right">
+                            <td class="condition" align="left">
 
                                 <div class="input-checkbox-wrap" >
                                     <input id="ri2" type="checkbox" name="rankItems" value="2">
@@ -310,7 +310,7 @@
                                     <option value="des">从大到小</option>
                                 </select>
                             </td>
-                            <td class="condition" align="right">
+                            <td class="condition" align="left">
 
                                 <div class="input-checkbox-wrap" >
                                     <input id="ri3" type="checkbox" name="rankItems" value="3">
@@ -328,7 +328,7 @@
                                     <option value="des">从大到小</option>
                                 </select>
                             </td>
-                            <td class="condition" align="right">
+                            <td class="condition" align="left">
 
                                 <div class="input-checkbox-wrap" >
                                     <input id="ri4" type="checkbox" name="rankItems" value="4">
@@ -346,7 +346,7 @@
                                     <option value="des">从大到小</option>
                                 </select>
                             </td>
-                            <td class="condition" align="right">
+                            <td class="condition" align="left">
 
                                 <div class="input-checkbox-wrap" >
                                     <input id="ri5" type="checkbox" name="rankItems" value="5">
@@ -357,7 +357,7 @@
                     </table>
 
 
-                </td>
+                </div>
             </div>
         <div class="row">
             <div class="col-md-4">

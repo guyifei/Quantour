@@ -25,7 +25,7 @@ input[type=checkbox]{
     transition: all ease 0.2s;
 }
 .input-checkbox-wrap>input[type=checkbox]:checked+label{
-    background-color: lightgray;
+    background-color: lightblue;
 }
 .input-checkbox-wrap>label:hover{
     background-color: #eeeeee;

@@ -117,7 +117,7 @@
             var data = splitData(rawData);
 
             myChart.setOption(option = {
-                backgroundColor: '#eee',
+                backgroundColor: '#ffffff',
                 animation: false,
                 legend: {
                     bottom: 10,
