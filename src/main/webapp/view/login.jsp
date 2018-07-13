@@ -70,11 +70,11 @@
                         <iframe name="thisform" style="display: none;"></iframe>
                         <table class="log-table" style="width: 100%;">
                             <tr>
-                                <td><h4 align="right">用户名</h4></td>
+                                <td><h4 align="right">用&nbsp&nbsp户&nbsp名</h4></td>
                                 <td align="right"><input type="text" class="log-input" name="username" title="login"></td>
                             </tr>
                             <tr>
-                                <td><h4 align="right">密码</h4></td>
+                                <td><h4 align="right">密&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp码</h4></td>
                                 <td align="right"><input type="password" class="log-input" name="password" title="login"></td>
                             </tr>
                             <tr>
@@ -82,13 +82,13 @@
                                 <td align="right">
                                     <div class="" style="margin-right:20px;margin-top: 4px">
                                         <input type="radio" name="RememberPass" id="oneDay" style="margin-left: 8px" />
-                                        <label for="oneDay" style="margin-left: 5px">1天</label>
+                                        <label for="oneDay" style="margin-left: 5px">1&nbsp天</label>
 
                                         <input type="radio" name="RememberPass" id="threeDay"  style="margin-left: 8px"/>
-                                        <label for="threeDay" style="margin-left: 5px">3天</label>
+                                        <label for="threeDay" style="margin-left: 5px">3&nbsp天</label>
 
                                         <input type="radio" name="RememberPass" id="sevenDay"  style="margin-left: 8px"/>
-                                        <label for="sevenDay" style="margin-left: 5px">7天</label>
+                                        <label for="sevenDay" style="margin-left: 5px">7&nbsp天</label>
 
 
                                         <!--<input type="checkbox" id="keeplen" name="keeplength">-->

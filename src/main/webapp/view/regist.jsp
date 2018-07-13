@@ -74,14 +74,14 @@
                         <iframe name="faker" style="display: none;"></iframe>
                         <table class="log-table" style="width: 100%;">
                             <tr>
-                                <td><h4 align="right">用户名</h4></td>
+                                <td><h4 align="right">用&nbsp&nbsp户&nbsp名</h4></td>
                                 <td align="right"><input type="text" class="log-input" name="username" title="regist"></td>
                             </tr>
                             <tr>
                                 <td  class="form-tip" colspan="2" id="username-tip"> </td>
                             </tr>
                             <tr>
-                                <td><h4 align="right">密   码</h4></td>
+                                <td><h4 align="right">密&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp码</h4></td>
                                 <td align="right"><input type="password" class="log-input" name="password" title="regist"></td>
                             </tr>
                             <tr>
@@ -108,7 +108,7 @@
                             </tr>
                             <tr align="right" >
 
-                                <td colspan="2" style="padding: 50px 0;">已有账号?<a href="/login">登录</a></td>
+                                <td colspan="2" style="padding: 50px 0;margin-bottom: 10px">已有账号?<a href="/login">登录</a></td>
                             </tr>
                         </table>
 

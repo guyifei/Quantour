@@ -121,13 +121,13 @@
                     <h3 id="stockNameA"></h3>
                     <h5 id="stockIDA"></h5>
                     <div class="seperator" style="background-color: lightgrey"></div>
-                    <h4><span class="glyphicon glyphicon-stats" aria-hidden="true"></span>对数收益率方差</h4>
+                    <h4><span class="glyphicon glyphicon-stats" aria-hidden="true"></span>&nbsp对数收益率方差</h4>
                     <h5 id="logarithmicA"></h5>
-                    <h4><span class="glyphicon glyphicon-stats" aria-hidden="true"></span>昨日最高价</h4>
+                    <h4><span class="glyphicon glyphicon-stats" aria-hidden="true"></span>&nbsp昨日最高价</h4>
                     <h5 id="highA"> </h5>
-                    <h4><span class="glyphicon glyphicon-stats" aria-hidden="true"></span>昨日最低价</h4>
+                    <h4><span class="glyphicon glyphicon-stats" aria-hidden="true"></span>&nbsp昨日最低价</h4>
                     <h5 id="lowA"> </h5>
-                    <h4><span class="glyphicon glyphicon-stats" aria-hidden="true"></span>昨日涨跌幅</h4>
+                    <h4><span class="glyphicon glyphicon-stats" aria-hidden="true"></span>&nbsp昨日涨跌幅</h4>
                     <h5 id="changeA"> </h5>
                 </div>
                 <%--<div class="seperator" style="background-color: grey;width: 100%;"></div>--%>
@@ -136,13 +136,13 @@
                     <h3 id="stockNameB">  </h3>
                     <h5 id="stockIDB">  </h5>
                     <div class="seperator" style="background-color: lightgrey;"></div>
-                    <h4><span class="glyphicon glyphicon-stats" aria-hidden="true"></span>对数收益率方差</h4>
+                    <h4><span class="glyphicon glyphicon-stats" aria-hidden="true"></span>&nbsp对数收益率方差</h4>
                     <h5 id="logarithmicB"></h5>
-                    <h4><span class="glyphicon glyphicon-stats" aria-hidden="true"></span>昨日最高价</h4>
+                    <h4><span class="glyphicon glyphicon-stats" aria-hidden="true"></span>&nbsp昨日最高价</h4>
                     <h5 id="highB"> </h5>
-                    <h4><span class="glyphicon glyphicon-stats" aria-hidden="true"></span>昨日最低价</h4>
+                    <h4><span class="glyphicon glyphicon-stats" aria-hidden="true"></span>&nbsp昨日最低价</h4>
                     <h5 id="lowB"> </h5>
-                    <h4><span class="glyphicon glyphicon-stats" aria-hidden="true"></span>昨日涨跌幅</h4>
+                    <h4><span class="glyphicon glyphicon-stats" aria-hidden="true"></span>&nbsp昨日涨跌幅</h4>
                     <h5 id="changeB"> </h5>
                 </div>
             </div>
