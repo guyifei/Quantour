@@ -186,7 +186,7 @@
 //                }
                 var tr=document.createElement("tr");
 //                alert(data[i].pchange);
-                if(data[i].pchange>0){
+                if(data[i].pchange<=0){
                     var td1=document.createElement("td");
                     td1.innerHTML="";
                     var a=document.createElement("a");

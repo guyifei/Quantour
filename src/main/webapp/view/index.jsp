@@ -486,9 +486,9 @@
                                 </td>
                                 <%--style="color:${(stockList[0].get(i).close-stockList[0].get(i).open<0)?"#f03740":"#009087"}"--%>
                                 <%--#f03740  #009087--%>
-                                <td class="column" style="color:${(stockList[0].get(i).close-stockList[0].get(i).open>0)?"#009087":"#f03740"}"><fmt:formatNumber value="${(stockList[1].get(i).close-stockList[1].get(i).open)/stockList[1].get(i).open}" pattern="#0.0000"/></td>
-                                <td class="column" style="color:${(stockList[0].get(i).close-stockList[0].get(i).open>0)?"#009087":"#f03740"}">${stockList[0].get(i).open}</td>
-                                <td class="column" style="color:${(stockList[0].get(i).close-stockList[0].get(i).open>0)?"#009087":"#f03740"}">${stockList[0].get(i).close}</td>
+                                <td class="column" style="color:${(stockList[0].get(i).close-stockList[0].get(i).open>0)?"#f03740":"#009087"}"><fmt:formatNumber value="${(stockList[1].get(i).close-stockList[1].get(i).open)/stockList[1].get(i).open}" pattern="#0.0000"/></td>
+                                <td class="column" style="color:${(stockList[0].get(i).close-stockList[0].get(i).open>0)?"#f03740":"#009087"}">${stockList[0].get(i).open}</td>
+                                <td class="column" style="color:${(stockList[0].get(i).close-stockList[0].get(i).open>0)?"#f03740":"#009087"}">${stockList[0].get(i).close}</td>
                                 <td class="column">
                                     <button onclick="favorite(this)" class="button" style="background:url('../static/images/icon/star_${favorList[0].get(i)?"filled":"blank"}.png') no-repeat center center;">
                                         <input type="text" name="stockId" style="display: none" value="${stockList[0].get(i).code}"/>
@@ -511,9 +511,9 @@
                                 <td class="column">
                                     <a href="/stock?stockname=${stockList[1].get(i).name}">${stockList[1].get(i).name}<br/>${stockList[1].get(i).code}</a>
                                 </td>
-                                <td class="column" style="color:${(stockList[0].get(i).close-stockList[0].get(i).open>0)?"#009087":"#f03740"}"><fmt:formatNumber value="${(stockList[1].get(i).close-stockList[1].get(i).open)/stockList[1].get(i).open}" pattern="#0.0000"/></td>
-                                <td class="column" style="color:${(stockList[0].get(i).close-stockList[0].get(i).open>0)?"#009087":"#f03740"}">${stockList[1].get(i).open}</td>
-                                <td class="column" style="color:${(stockList[0].get(i).close-stockList[0].get(i).open>0)?"#009087":"#f03740"}">${stockList[1].get(i).close}</td>
+                                <td class="column" style="color:${(stockList[0].get(i).close-stockList[0].get(i).open>0)?"#f03740":"#009087"}"><fmt:formatNumber value="${(stockList[1].get(i).close-stockList[1].get(i).open)/stockList[1].get(i).open}" pattern="#0.0000"/></td>
+                                <td class="column" style="color:${(stockList[0].get(i).close-stockList[0].get(i).open>0)?"#f03740":"#009087"}">${stockList[1].get(i).open}</td>
+                                <td class="column" style="color:${(stockList[0].get(i).close-stockList[0].get(i).open>0)?"#f03740":"#009087"}">${stockList[1].get(i).close}</td>
                                 <td class="column">
                                     <button onclick="favorite(this)" class="button" style="background:url('../static/images/icon/star_${favorList[1].get(i)?"filled":"blank"}.png') no-repeat center center;">
                                         <input type="text" name="stockId" style="display: none" value="${stockList[1].get(i).code}"/>
@@ -536,9 +536,9 @@
                                 <td class="column">
                                     <a href="/stock?stockname=${stockList[2].get(i).name}">${stockList[2].get(i).name}<br/>${stockList[2].get(i).code}</a>
                                 </td>
-                                <td class="column" style="color:${(stockList[0].get(i).close-stockList[0].get(i).open>0)?"#009087":"#f03740"}"><fmt:formatNumber value="${(stockList[2].get(i).close-stockList[2].get(i).open)/stockList[2].get(i).open}" pattern="#0.0000"/></td>
-                                <td class="column" style="color:${(stockList[0].get(i).close-stockList[0].get(i).open>0)?"#009087":"#f03740"}">${stockList[2].get(i).open}</td>
-                                <td class="column" style="color:${(stockList[0].get(i).close-stockList[0].get(i).open>0)?"#009087":"#f03740"}">${stockList[2].get(i).close}</td>
+                                <td class="column" style="color:${(stockList[0].get(i).close-stockList[0].get(i).open>0)?"#f03740":"#009087"}"><fmt:formatNumber value="${(stockList[2].get(i).close-stockList[2].get(i).open)/stockList[2].get(i).open}" pattern="#0.0000"/></td>
+                                <td class="column" style="color:${(stockList[0].get(i).close-stockList[0].get(i).open>0)?"#f03740":"#009087"}">${stockList[2].get(i).open}</td>
+                                <td class="column" style="color:${(stockList[0].get(i).close-stockList[0].get(i).open>0)?"#f03740":"#009087"}">${stockList[2].get(i).close}</td>
                                 <td class="column" align="center">
                                     <button onclick="favorite(this)" class="button" style="background:url('../static/images/icon/star_${favorList[2].get(i)?"filled":"blank"}.png') no-repeat center center;">
                                         <input type="text" name="stockId" style="display: none" value="${stockList[2].get(i).code}"/>
